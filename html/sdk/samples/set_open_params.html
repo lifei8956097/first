@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>设定打开参数 &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="相机控制参数 API" href="camera_control_params.html" />
+    <link rel="prev" title="获取 IMU 标定参数" href="get_imu_params.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../product/contents.html">产品</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../sdk_info.html">SDK 说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdk_install.html">SDK 安装</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="contents.html">SDK 样例</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="get_stereo_image.html">获取双目图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_image.html">获取双目图像(兼容 USB2.0)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_depth.html">获取深度图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_points.html">获取点云图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_imu.html">获取 IMU 数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_from_callbacks.html">从回调接口获取数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_all_with_options.html">通过选项获取不同类型的数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_image_params.html">获取图像标定参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_imu_params.html">获取 IMU 标定参数</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">设定打开参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera_control_params.html">相机控制参数 API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="depth_filter.html">使用filter进行深度数据的滤波</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/contents.html">SDK 工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdk_projects.html">工程引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdk_changelog.html">更新日志</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apidoc/contents.html">API DOCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contents.html">SDK</a> &raquo;</li>
+        
+          <li><a href="contents.html">SDK 样例</a> &raquo;</li>
+        
+      <li>设定打开参数</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sdk/samples/set_open_params.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="set-open-params">
+<span id="id1"></span><h1>设定打开参数<a class="headerlink" href="#set-open-params" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>设定图像分辨率<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>通过设置 <code class="docutils literal notranslate"><span class="pre">params.stream_mode</span></code> 参数，就可以设定图像的分辨率。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>图像分辨率现在支持4种: 单目640X480，1280x720 和双目1280x480，
+2560x720</p>
+</div>
+<p>参考代码片段:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Stream mode: left color only</span>
+<span class="c1">// params.stream_mode = StreamMode::STREAM_640x480;  // vga</span>
+<span class="c1">// params.stream_mode = StreamMode::STREAM_1280x720;  // hd</span>
+<span class="c1">// Stream mode: left+right color</span>
+<span class="c1">// params.stream_mode = StreamMode::STREAM_1280x480;  // vga</span>
+<span class="n">params</span><span class="p">.</span><span class="n">stream_mode</span> <span class="o">=</span> <span class="n">StreamMode</span><span class="o">::</span><span class="n">STREAM_2560x720</span><span class="p">;</span>  <span class="c1">// hd</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>设定图像帧率<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>通过设置 <code class="docutils literal notranslate"><span class="pre">params.framerate</span></code> 参数，就可以设定图像的帧率。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>图像帧率有效值(0-60),分辨率在2560X720时帧率有效值为(30),可以参考 <a class="reference internal" href="../../product/support_resolutions.html#product-support-resolutions"><span class="std std-ref">分辨率支持列表</span></a></p>
+</div>
+<p>参考代码片段:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Framerate: 10(default), [0,60], [30](STREAM_2560x720)</span>
+<span class="n">params</span><span class="p">.</span><span class="n">framerate</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>设定图像模式<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>通过设置 <code class="docutils literal notranslate"><span class="pre">params.color_mode</span></code> 参数，就可以设定图像的模式。</p>
+<p><code class="docutils literal notranslate"><span class="pre">COLOR_RAW</span></code> 为原图， <code class="docutils literal notranslate"><span class="pre">COLOR_RECTIFIED</span></code> 为矫正图。</p>
+<p>参考代码片段:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Color mode: raw(default), rectified</span>
+<span class="c1">// params.color_mode = ColorMode::COLOR_RECTIFIED;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>设定深度图模式<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>通过 <code class="docutils literal notranslate"><span class="pre">params.depth_mode</span></code> 参数，就可以设定深度图的模式。</p>
+<p><code class="docutils literal notranslate"><span class="pre">DEPTH_COLORFUL</span></code> 为着色后的深度图，<code class="docutils literal notranslate"><span class="pre">DEPTH_GRAY</span></code> 为灰色深度图，
+<code class="docutils literal notranslate"><span class="pre">DEPTH_GRAY</span></code> 为原始深度图。</p>
+<p>参考代码片段:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Depth mode: colorful(default), gray, raw</span>
+<span class="c1">// params.depth_mode = DepthMode::DEPTH_GRAY;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>启用自动曝光及自动白平衡<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>通过设置 <code class="docutils literal notranslate"><span class="pre">params.state_ae</span></code> 和 <code class="docutils literal notranslate"><span class="pre">params.state_awb</span></code> 为 <code class="docutils literal notranslate"><span class="pre">true</span></code>
+，就可以启动自动曝光和自动白平衡。</p>
+<p>默认自动曝光和自动白平衡是启用的，如果想关闭，可以设置参数值为 <code class="docutils literal notranslate"><span class="pre">false</span></code>
+。</p>
+<p>参考代码片段：</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Auto-exposure: true(default), false</span>
+<span class="c1">// params.state_ae = false;</span>
+
+<span class="c1">// Auto-white balance: true(default), false</span>
+<span class="c1">// params.state_awb = false;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ir">
+<h2>启用IR及其调节<a class="headerlink" href="#ir" title="永久链接至标题">¶</a></h2>
+<p>通过设置 <code class="docutils literal notranslate"><span class="pre">params.ir_intensity</span></code> 参数，就可以设定图像的IR强度。</p>
+<p>启用IR，就是设定 <code class="docutils literal notranslate"><span class="pre">params.ir_intensity</span></code>
+大于0的值。值越大，强度越高(最大为10)。</p>
+<p>参考代码片段：</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Infrared intensity: 0(default), [0,10]</span>
+<span class="n">params</span><span class="p">.</span><span class="n">ir_intensity</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>启用此功能后，你可以看到ir光斑:</p>
+<img alt="../../_images/ir.png" src="../../_images/ir.png" />
+</div>
+</div>
+<div class="section" id="ir-depth-only">
+<h2>启用 IR Depth Only<a class="headerlink" href="#ir-depth-only" title="永久链接至标题">¶</a></h2>
+<p>通过设置 <code class="docutils literal notranslate"><span class="pre">params.ir_depth_only</span></code> 参数，就可以设定IR Depth
+Only功能。默认关闭。开启此功能后，IR只作用于深度图像，在图像上不会出现IR光的纹路。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>该功能只能在 [2560x720 30fps] 以及 [1280x720,1280x480,640x480 60fps] 下生效。
+开启此功能帧率会被平分，例如设置图像帧率为30fps时，获取的图像为15fps，深度图也为15fps。</p>
+</div>
+<p>参考代码片段：</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// IR Depth Only: true, false(default)</span>
+<span class="c1">// Note: IR Depth Only mode support frame rate between 15fps and 30fps.</span>
+<span class="c1">//     When dev_mode != DeviceMode::DEVICE_ALL,</span>
+<span class="c1">//       IR Depth Only mode not be supported.</span>
+<span class="c1">//     When stream_mode == StreamMode::STREAM_2560x720,</span>
+<span class="c1">//       frame rate only be 15fps in this mode.</span>
+<span class="c1">//     When frame rate less than 15fps or greater than 30fps,</span>
+<span class="c1">//       IR Depth Only mode will be not available.</span>
+<span class="c1">// params.ir_depth_only = false;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>调整深度图着色值<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>通过设置 <code class="docutils literal notranslate"><span class="pre">params.colour_depth_value</span></code> 参数, 默认值是 5000。</p>
+<p>参考代码片段:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Colour depth image, default 5000. [0, 16384]</span>
+<span class="n">params</span><span class="p">.</span><span class="n">colour_depth_value</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>以上功能参考运行结果，于 Linux 上：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Open device: <span class="m">0</span>, /dev/video1
+
+D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span>0D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span>35D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span><span class="m">1</span>-- Auto-exposure state: enabled
+D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span>0D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span>12D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span><span class="m">1</span>-- Auto-white balance state: enabled
+-- Framerate: <span class="m">5</span>
+D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span><span class="m">4</span> SetDepthDataType: <span class="m">4</span>
+-- Color Stream: 1280x720 YUYV
+-- Depth Stream: 1280x720 YUYV
+
+D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span>0D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span>3D/eSPDI_API: SetPropertyValue <span class="nv">control</span><span class="o">=</span><span class="m">7</span> <span class="nv">value</span><span class="o">=</span><span class="m">4</span>
+-- IR intensity: <span class="m">4</span>
+D/eSPDI_API: CVideoDevice::OpenDevice 1280x720 <span class="nv">fps</span><span class="o">=</span><span class="m">5</span>
+
+Open device success
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>更改参数后需要在sdk的目录下运行</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make samples
+</pre></div>
+</div>
+<p>来使设置的参数生效。</p>
+</div>
+<p>完整代码样例
+<a class="reference external" href="https://github.com/slightech/MYNT-EYE-D-SDK/blob/master/samples/src/get_image.cc">get_image.cc</a>
+。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="camera_control_params.html" class="btn btn-neutral float-right" title="相机控制参数 API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="get_imu_params.html" class="btn btn-neutral float-left" title="获取 IMU 标定参数" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

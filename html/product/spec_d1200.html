@@ -1,0 +1,374 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>D1200 &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="分辨率支持列表" href="support_resolutions.html" />
+    <link rel="prev" title="D1000-50/Color" href="spec_d1000_50.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">产品</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="product_desc.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_surface.html">外观</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="product_spec.html">规格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="spec_d1000_120.html">D1000-IR-120/Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec_d1000_50.html">D1000-50/Color</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">D1200</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="support_resolutions.html">分辨率支持列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imu_coord.html">IMU 坐标系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix.html">附件</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/contents.html">SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc/contents.html">API DOCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">产品</a> &raquo;</li>
+        
+          <li><a href="product_spec.html">规格</a> &raquo;</li>
+        
+      <li>D1200</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/product/spec_d1200.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="d1200">
+<span id="product-spec-d1200"></span><h1>D1200<a class="headerlink" href="#d1200" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>产品参数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>型号</p></td>
+<td><p>D1200</p></td>
+</tr>
+<tr class="row-even"><td><p>尺寸</p></td>
+<td><p>75.5x34.5x12.9mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>帧率</p></td>
+<td><p>Up to 30fps</p></td>
+</tr>
+<tr class="row-even"><td><p>分辨率</p></td>
+<td><p>2560*720;1280*480</p></td>
+</tr>
+<tr class="row-odd"><td><p>深度分辨率</p></td>
+<td><p>1280*720; 640*480</p></td>
+</tr>
+<tr class="row-even"><td><p>像素尺寸</p></td>
+<td><p>3.0*3.0μm</p></td>
+</tr>
+<tr class="row-odd"><td><p>基线</p></td>
+<td><p>40.0mm</p></td>
+</tr>
+<tr class="row-even"><td><p>视角</p></td>
+<td><p>D:66° H:59° V:35°</p></td>
+</tr>
+<tr class="row-odd"><td><p>焦距</p></td>
+<td><p>3.3mm</p></td>
+</tr>
+<tr class="row-even"><td><p>支持IR</p></td>
+<td><p>YES</p></td>
+</tr>
+<tr class="row-odd"><td><p>IR可探测距离</p></td>
+<td><p>2m</p></td>
+</tr>
+<tr class="row-even"><td><p>色彩模式</p></td>
+<td><p>Color</p></td>
+</tr>
+<tr class="row-odd"><td><p>深度工作距离</p></td>
+<td><p>0.2-3m</p></td>
+</tr>
+<tr class="row-even"><td><p>曝光方式</p></td>
+<td><p>Rolling Shutter</p></td>
+</tr>
+<tr class="row-odd"><td><p>最大功耗</p></td>
+<td><p>0.75-2.5W&#64;5V DC from USB</p></td>
+</tr>
+<tr class="row-even"><td><p>输出数据格式</p></td>
+<td><p>YUYV/MJPG</p></td>
+</tr>
+<tr class="row-odd"><td><p>接口</p></td>
+<td><p>Type-C/Micro USB2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>重量</p></td>
+<td><p>44g</p></td>
+</tr>
+<tr class="row-odd"><td><p>UVC MODE</p></td>
+<td><p>Yes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h2>软件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>支持操作系统</p></td>
+<td><p>Android 5.x ~ Android 8.x</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h2>环境<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 73%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>运行温度</p></td>
+<td><p>-10°C~55°C</p></td>
+</tr>
+<tr class="row-even"><td><p>存储温度</p></td>
+<td><p>-15°C~70°C</p></td>
+</tr>
+<tr class="row-odd"><td><p>湿度</p></td>
+<td><p>10% to 80% non-condensing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h2>包装<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 73%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>包装内容</p></td>
+<td><p>MYNT EYE x1   USB Cable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>保修<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 73%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>产品保修</p></td>
+<td><p>12 Months Limited Manufacturer’s Warranty</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id6">
+<h2>精度<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 73%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>深度测量精度</p></td>
+<td><p>误差不超过1%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="support_resolutions.html" class="btn btn-neutral float-right" title="分辨率支持列表" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="spec_d1000_50.html" class="btn btn-neutral float-left" title="D1000-50/Color" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

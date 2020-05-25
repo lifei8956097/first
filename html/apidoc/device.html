@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Device &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Enums" href="enums.html" />
+    <link rel="prev" title="Camera" href="camera.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../product/contents.html">产品</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/contents.html">SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="camera.html">Camera</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">API DOCS</a> &raquo;</li>
+        
+      <li>Device</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/device.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="device">
+<h1>Device<a class="headerlink" href="#device" title="永久链接至标题">¶</a></h1>
+<div class="section" id="deviceinfo">
+<h2>DeviceInfo<a class="headerlink" href="#deviceinfo" title="永久链接至标题">¶</a></h2>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed10DeviceInfoE">
+<span id="_CPPv3N8mynteyed10DeviceInfoE"></span><span id="_CPPv2N8mynteyed10DeviceInfoE"></span><span id="mynteyed::DeviceInfo"></span><span class="target" id="structmynteyed_1_1_device_info"></span><em class="property">struct </em><code class="sig-name descname">DeviceInfo</code><a class="headerlink" href="#_CPPv4N8mynteyed10DeviceInfoE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Device information. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10DeviceInfo5indexE">
+<span id="_CPPv3N8mynteyed10DeviceInfo5indexE"></span><span id="_CPPv2N8mynteyed10DeviceInfo5indexE"></span><span id="mynteyed::DeviceInfo::index__std::int32_t"></span><span class="target" id="structmynteyed_1_1_device_info_1afc28a9b5b6bb3dc1290173a946e684af"></span>std::int32_t <code class="sig-name descname">index</code><a class="headerlink" href="#_CPPv4N8mynteyed10DeviceInfo5indexE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The device index. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10DeviceInfo4nameE">
+<span id="_CPPv3N8mynteyed10DeviceInfo4nameE"></span><span id="_CPPv2N8mynteyed10DeviceInfo4nameE"></span><span id="mynteyed::DeviceInfo::name__ss"></span><span class="target" id="structmynteyed_1_1_device_info_1ab2d55f8f0f9347dc4fbff4de27954b73"></span>std::string <code class="sig-name descname">name</code><a class="headerlink" href="#_CPPv4N8mynteyed10DeviceInfo4nameE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The device name. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10DeviceInfo4typeE">
+<span id="_CPPv3N8mynteyed10DeviceInfo4typeE"></span><span id="_CPPv2N8mynteyed10DeviceInfo4typeE"></span><span id="mynteyed::DeviceInfo::type__std::uint16_t"></span><span class="target" id="structmynteyed_1_1_device_info_1a95310e2357335fcc47b25459e9108a20"></span>std::uint16_t <code class="sig-name descname">type</code><a class="headerlink" href="#_CPPv4N8mynteyed10DeviceInfo4typeE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The device type. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10DeviceInfo3pidE">
+<span id="_CPPv3N8mynteyed10DeviceInfo3pidE"></span><span id="_CPPv2N8mynteyed10DeviceInfo3pidE"></span><span id="mynteyed::DeviceInfo::pid__std::uint16_t"></span><span class="target" id="structmynteyed_1_1_device_info_1a0d009df4dfcf019b53a852b7e7f399eb"></span>std::uint16_t <code class="sig-name descname">pid</code><a class="headerlink" href="#_CPPv4N8mynteyed10DeviceInfo3pidE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The product id. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10DeviceInfo3vidE">
+<span id="_CPPv3N8mynteyed10DeviceInfo3vidE"></span><span id="_CPPv2N8mynteyed10DeviceInfo3vidE"></span><span id="mynteyed::DeviceInfo::vid__std::uint16_t"></span><span class="target" id="structmynteyed_1_1_device_info_1a74b2308ec457e5b630b9e0c44ff099e1"></span>std::uint16_t <code class="sig-name descname">vid</code><a class="headerlink" href="#_CPPv4N8mynteyed10DeviceInfo3vidE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The vendor id. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10DeviceInfo7chip_idE">
+<span id="_CPPv3N8mynteyed10DeviceInfo7chip_idE"></span><span id="_CPPv2N8mynteyed10DeviceInfo7chip_idE"></span><span id="mynteyed::DeviceInfo::chip_id__std::uint16_t"></span><span class="target" id="structmynteyed_1_1_device_info_1ad9f7a919668c8820fcd7f266c20f8044"></span>std::uint16_t <code class="sig-name descname">chip_id</code><a class="headerlink" href="#_CPPv4N8mynteyed10DeviceInfo7chip_idE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The chip id. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10DeviceInfo10fw_versionE">
+<span id="_CPPv3N8mynteyed10DeviceInfo10fw_versionE"></span><span id="_CPPv2N8mynteyed10DeviceInfo10fw_versionE"></span><span id="mynteyed::DeviceInfo::fw_version__ss"></span><span class="target" id="structmynteyed_1_1_device_info_1a48578ff52a3e16371290f0d3e29d1bbb"></span>std::string <code class="sig-name descname">fw_version</code><a class="headerlink" href="#_CPPv4N8mynteyed10DeviceInfo10fw_versionE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The firmware version. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10DeviceInfo2snE">
+<span id="_CPPv3N8mynteyed10DeviceInfo2snE"></span><span id="_CPPv2N8mynteyed10DeviceInfo2snE"></span><span id="mynteyed::DeviceInfo::sn__ss"></span><span class="target" id="structmynteyed_1_1_device_info_1a0ef71ca7af8d74fcf65301bea4a75d88"></span>std::string <code class="sig-name descname">sn</code><a class="headerlink" href="#_CPPv4N8mynteyed10DeviceInfo2snE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The serial number. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="image">
+<h2>Image<a class="headerlink" href="#image" title="永久链接至标题">¶</a></h2>
+<dl class="cpp class">
+<dt id="_CPPv4N8mynteyed5ImageE">
+<span id="_CPPv3N8mynteyed5ImageE"></span><span id="_CPPv2N8mynteyed5ImageE"></span><span id="mynteyed::Image"></span><span class="target" id="classmynteyed_1_1_image"></span><em class="property">class </em><code class="sig-name descname">Image</code><a class="headerlink" href="#_CPPv4N8mynteyed5ImageE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Subclassed by mynteyed::ImageColor, mynteyed::ImageDepth</p>
+</dd></dl>
+
+</div>
+<div class="section" id="openparams">
+<h2>OpenParams<a class="headerlink" href="#openparams" title="永久链接至标题">¶</a></h2>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed10OpenParamsE">
+<span id="_CPPv3N8mynteyed10OpenParamsE"></span><span id="_CPPv2N8mynteyed10OpenParamsE"></span><span id="mynteyed::OpenParams"></span><span class="target" id="structmynteyed_1_1_open_params"></span><em class="property">struct </em><code class="sig-name descname">OpenParams</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParamsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Device open parameters. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed10OpenParams10OpenParamsEv">
+<span id="_CPPv3N8mynteyed10OpenParams10OpenParamsEv"></span><span id="_CPPv2N8mynteyed10OpenParams10OpenParamsEv"></span><span id="mynteyed::OpenParams::OpenParams"></span><span class="target" id="structmynteyed_1_1_open_params_1a830b91a62f5a6026c3ee38f637362000"></span><code class="sig-name descname">OpenParams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams10OpenParamsEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed10OpenParamsD0Ev">
+<span id="_CPPv3N8mynteyed10OpenParamsD0Ev"></span><span id="_CPPv2N8mynteyed10OpenParamsD0Ev"></span><span id="mynteyed::OpenParams::~OpenParams"></span><span class="target" id="structmynteyed_1_1_open_params_1ab82d7ba295b25af51278faede2b330ae"></span><code class="sig-name descname">~OpenParams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParamsD0Ev" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams9dev_indexE">
+<span id="_CPPv3N8mynteyed10OpenParams9dev_indexE"></span><span id="_CPPv2N8mynteyed10OpenParams9dev_indexE"></span><span id="mynteyed::OpenParams::dev_index__std::int32_t"></span><span class="target" id="structmynteyed_1_1_open_params_1a3852dcbad60d4b97f96c012b506524b1"></span>std::int32_t <code class="sig-name descname">dev_index</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams9dev_indexE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Device index. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams9framerateE">
+<span id="_CPPv3N8mynteyed10OpenParams9framerateE"></span><span id="_CPPv2N8mynteyed10OpenParams9framerateE"></span><span id="mynteyed::OpenParams::framerate__std::int32_t"></span><span class="target" id="structmynteyed_1_1_open_params_1ac0333e47547d15f28ddc681420338502"></span>std::int32_t <code class="sig-name descname">framerate</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams9framerateE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Framerate, range [0,60], [0,30](STREAM_2560x720), default 10. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams8dev_modeE">
+<span id="_CPPv3N8mynteyed10OpenParams8dev_modeE"></span><span id="_CPPv2N8mynteyed10OpenParams8dev_modeE"></span><span id="mynteyed::OpenParams::dev_mode__DeviceMode"></span><span class="target" id="structmynteyed_1_1_open_params_1a39ebc084d5ba0b6368ac7771916ac7fd"></span><a class="reference internal" href="enums.html#_CPPv4N8mynteyed10DeviceModeE" title="mynteyed::DeviceMode">DeviceMode</a> <code class="sig-name descname">dev_mode</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams8dev_modeE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Device mode, default DEVICE_ALL. </p>
+<p><ul class="simple">
+<li><p>DEVICE_COLOR: IMAGE_LEFT_COLOR y IMAGE_RIGHT_COLOR - IMAGE_DEPTH n </p></li>
+<li><p>DEVICE_DEPTH: IMAGE_LEFT_COLOR n IMAGE_RIGHT_COLOR n IMAGE_DEPTH y </p></li>
+<li><p>DEVICE_ALL: IMAGE_LEFT_COLOR y IMAGE_RIGHT_COLOR - IMAGE_DEPTH y </p></li>
+</ul>
+</p>
+<p>Could detect image type is enabled after opened through <a class="reference internal" href="camera.html#classmynteyed_1_1_camera_1a603b39439add1c002f50e4c61911c7d0"><span class="std std-ref">Camera::IsStreamDataEnabled()</span></a>.</p>
+<p>Note: y: available, n: unavailable, -: depends on <a class="reference internal" href="#structmynteyed_1_1_open_params_1add1d4a25e1155b9845072f9b1d95e2d5"><span class="std std-ref">stream_mode</span></a> </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams10color_modeE">
+<span id="_CPPv3N8mynteyed10OpenParams10color_modeE"></span><span id="_CPPv2N8mynteyed10OpenParams10color_modeE"></span><span id="mynteyed::OpenParams::color_mode__ColorMode"></span><span class="target" id="structmynteyed_1_1_open_params_1ad653784db7249017dbacdfc5d67692c2"></span><a class="reference internal" href="enums.html#_CPPv4N8mynteyed9ColorModeE" title="mynteyed::ColorMode">ColorMode</a> <code class="sig-name descname">color_mode</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams10color_modeE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Color mode, default COLOR_RAW. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams10depth_modeE">
+<span id="_CPPv3N8mynteyed10OpenParams10depth_modeE"></span><span id="_CPPv2N8mynteyed10OpenParams10depth_modeE"></span><span id="mynteyed::OpenParams::depth_mode__DepthMode"></span><span class="target" id="structmynteyed_1_1_open_params_1a863e389abfa7f415f7a04e88bf3682d0"></span><a class="reference internal" href="enums.html#_CPPv4N8mynteyed9DepthModeE" title="mynteyed::DepthMode">DepthMode</a> <code class="sig-name descname">depth_mode</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams10depth_modeE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Depth mode, default DEPTH_COLORFUL. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams11stream_modeE">
+<span id="_CPPv3N8mynteyed10OpenParams11stream_modeE"></span><span id="_CPPv2N8mynteyed10OpenParams11stream_modeE"></span><span id="mynteyed::OpenParams::stream_mode__StreamMode"></span><span class="target" id="structmynteyed_1_1_open_params_1add1d4a25e1155b9845072f9b1d95e2d5"></span><a class="reference internal" href="enums.html#_CPPv4N8mynteyed10StreamModeE" title="mynteyed::StreamMode">StreamMode</a> <code class="sig-name descname">stream_mode</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams11stream_modeE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Stream mode of color &amp; depth, default STREAM_1280x720. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams19color_stream_formatE">
+<span id="_CPPv3N8mynteyed10OpenParams19color_stream_formatE"></span><span id="_CPPv2N8mynteyed10OpenParams19color_stream_formatE"></span><span id="mynteyed::OpenParams::color_stream_format__StreamFormat"></span><span class="target" id="structmynteyed_1_1_open_params_1aa8d158586597d95704c25ef5751c6dcb"></span><a class="reference internal" href="enums.html#_CPPv4N8mynteyed12StreamFormatE" title="mynteyed::StreamFormat">StreamFormat</a> <code class="sig-name descname">color_stream_format</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams19color_stream_formatE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Stream format of color, default STREAM_YUYV. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams19depth_stream_formatE">
+<span id="_CPPv3N8mynteyed10OpenParams19depth_stream_formatE"></span><span id="_CPPv2N8mynteyed10OpenParams19depth_stream_formatE"></span><span id="mynteyed::OpenParams::depth_stream_format__StreamFormat"></span><span class="target" id="structmynteyed_1_1_open_params_1af8d7b698f8c648368cc0b9cab31df806"></span><a class="reference internal" href="enums.html#_CPPv4N8mynteyed12StreamFormatE" title="mynteyed::StreamFormat">StreamFormat</a> <code class="sig-name descname">depth_stream_format</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams19depth_stream_formatE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Stream format of depth, default STREAM_YUYV. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams8state_aeE">
+<span id="_CPPv3N8mynteyed10OpenParams8state_aeE"></span><span id="_CPPv2N8mynteyed10OpenParams8state_aeE"></span><span id="mynteyed::OpenParams::state_ae__b"></span><span class="target" id="structmynteyed_1_1_open_params_1ad817a24a146a4d6c6780e38e3520c79f"></span>bool <code class="sig-name descname">state_ae</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams8state_aeE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Auto-exposure, default true. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams9state_awbE">
+<span id="_CPPv3N8mynteyed10OpenParams9state_awbE"></span><span id="_CPPv2N8mynteyed10OpenParams9state_awbE"></span><span id="mynteyed::OpenParams::state_awb__b"></span><span class="target" id="structmynteyed_1_1_open_params_1a8a7be9d5f8805cdd8cac99285c6dbdaf"></span>bool <code class="sig-name descname">state_awb</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams9state_awbE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Auto-white balance, default true. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams12ir_intensityE">
+<span id="_CPPv3N8mynteyed10OpenParams12ir_intensityE"></span><span id="_CPPv2N8mynteyed10OpenParams12ir_intensityE"></span><span id="mynteyed::OpenParams::ir_intensity__std::uint8_t"></span><span class="target" id="structmynteyed_1_1_open_params_1ad7d20cd71a3e6582c8f9ab04fa6d9941"></span>std::uint8_t <code class="sig-name descname">ir_intensity</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams12ir_intensityE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>IR (Infrared), range [0,10], default 0. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams13ir_depth_onlyE">
+<span id="_CPPv3N8mynteyed10OpenParams13ir_depth_onlyE"></span><span id="_CPPv2N8mynteyed10OpenParams13ir_depth_onlyE"></span><span id="mynteyed::OpenParams::ir_depth_only__b"></span><span class="target" id="structmynteyed_1_1_open_params_1ac2fd9add8ced4e7c0307dbadf7f52b59"></span>bool <code class="sig-name descname">ir_depth_only</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams13ir_depth_onlyE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>IR Depth Only mode, default false. </p>
+<p>Note: When frame rate less than 30fps, IR Depth Only will be not available. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10OpenParams18colour_depth_valueE">
+<span id="_CPPv3N8mynteyed10OpenParams18colour_depth_valueE"></span><span id="_CPPv2N8mynteyed10OpenParams18colour_depth_valueE"></span><span id="mynteyed::OpenParams::colour_depth_value__float"></span><span class="target" id="structmynteyed_1_1_open_params_1a87b1fc4bf24eff392ea6485847d18505"></span>float <code class="sig-name descname">colour_depth_value</code><a class="headerlink" href="#_CPPv4N8mynteyed10OpenParams18colour_depth_valueE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Colour depth image, default 5000. </p>
+<p>[0, 16384] </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="streaminfo">
+<h2>StreamInfo<a class="headerlink" href="#streaminfo" title="永久链接至标题">¶</a></h2>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed10StreamInfoE">
+<span id="_CPPv3N8mynteyed10StreamInfoE"></span><span id="_CPPv2N8mynteyed10StreamInfoE"></span><span id="mynteyed::StreamInfo"></span><span class="target" id="structmynteyed_1_1_stream_info"></span><em class="property">struct </em><code class="sig-name descname">StreamInfo</code><a class="headerlink" href="#_CPPv4N8mynteyed10StreamInfoE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Stream information. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10StreamInfo5indexE">
+<span id="_CPPv3N8mynteyed10StreamInfo5indexE"></span><span id="_CPPv2N8mynteyed10StreamInfo5indexE"></span><span id="mynteyed::StreamInfo::index__std::int32_t"></span><span class="target" id="structmynteyed_1_1_stream_info_1a7f8b7d1fe1f4cc8292ae972618dd2809"></span>std::int32_t <code class="sig-name descname">index</code><a class="headerlink" href="#_CPPv4N8mynteyed10StreamInfo5indexE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The stream index. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10StreamInfo5widthE">
+<span id="_CPPv3N8mynteyed10StreamInfo5widthE"></span><span id="_CPPv2N8mynteyed10StreamInfo5widthE"></span><span id="mynteyed::StreamInfo::width__std::int32_t"></span><span class="target" id="structmynteyed_1_1_stream_info_1abfd8f045b8a749362076335ee6824c38"></span>std::int32_t <code class="sig-name descname">width</code><a class="headerlink" href="#_CPPv4N8mynteyed10StreamInfo5widthE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The stream width. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10StreamInfo6heightE">
+<span id="_CPPv3N8mynteyed10StreamInfo6heightE"></span><span id="_CPPv2N8mynteyed10StreamInfo6heightE"></span><span id="mynteyed::StreamInfo::height__std::int32_t"></span><span class="target" id="structmynteyed_1_1_stream_info_1ae170897f0157548033ab950cd6b130da"></span>std::int32_t <code class="sig-name descname">height</code><a class="headerlink" href="#_CPPv4N8mynteyed10StreamInfo6heightE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The stream height. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10StreamInfo6formatE">
+<span id="_CPPv3N8mynteyed10StreamInfo6formatE"></span><span id="_CPPv2N8mynteyed10StreamInfo6formatE"></span><span id="mynteyed::StreamInfo::format__StreamFormat"></span><span class="target" id="structmynteyed_1_1_stream_info_1a2f63b5ba24bad4b6acd95b39712cca73"></span><a class="reference internal" href="enums.html#_CPPv4N8mynteyed12StreamFormatE" title="mynteyed::StreamFormat">StreamFormat</a> <code class="sig-name descname">format</code><a class="headerlink" href="#_CPPv4N8mynteyed10StreamInfo6formatE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The stream format. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="enums.html" class="btn btn-neutral float-right" title="Enums" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="camera.html" class="btn btn-neutral float-left" title="Camera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

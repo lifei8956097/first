@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Types &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Utils" href="utils.html" />
+    <link rel="prev" title="Enums" href="enums.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../product/contents.html">产品</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/contents.html">SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="camera.html">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enums.html">Enums</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">API DOCS</a> &raquo;</li>
+        
+      <li>Types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/types.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="types">
+<h1>Types<a class="headerlink" href="#types" title="永久链接至标题">¶</a></h1>
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="永久链接至标题">¶</a></h2>
+<div class="section" id="imginfo">
+<h3>ImgInfo<a class="headerlink" href="#imginfo" title="永久链接至标题">¶</a></h3>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed7ImgInfoE">
+<span id="_CPPv3N8mynteyed7ImgInfoE"></span><span id="_CPPv2N8mynteyed7ImgInfoE"></span><span id="mynteyed::ImgInfo"></span><span class="target" id="structmynteyed_1_1_img_info"></span><em class="property">struct </em><code class="sig-name descname">ImgInfo</code><a class="headerlink" href="#_CPPv4N8mynteyed7ImgInfoE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="device.html#classmynteyed_1_1_image"><span class="std std-ref">Image</span></a> information. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed7ImgInfo8frame_idE">
+<span id="_CPPv3N8mynteyed7ImgInfo8frame_idE"></span><span id="_CPPv2N8mynteyed7ImgInfo8frame_idE"></span><span id="mynteyed::ImgInfo::frame_id__std::uint16_t"></span><span class="target" id="structmynteyed_1_1_img_info_1a66290d670c71bbfdf81c21787a559b78"></span>std::uint16_t <code class="sig-name descname">frame_id</code><a class="headerlink" href="#_CPPv4N8mynteyed7ImgInfo8frame_idE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="device.html#classmynteyed_1_1_image"><span class="std std-ref">Image</span></a> frame id. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed7ImgInfo9timestampE">
+<span id="_CPPv3N8mynteyed7ImgInfo9timestampE"></span><span id="_CPPv2N8mynteyed7ImgInfo9timestampE"></span><span id="mynteyed::ImgInfo::timestamp__std::uint32_t"></span><span class="target" id="structmynteyed_1_1_img_info_1a3665fe9365b6f691a24c1ae1077caa01"></span>std::uint32_t <code class="sig-name descname">timestamp</code><a class="headerlink" href="#_CPPv4N8mynteyed7ImgInfo9timestampE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="device.html#classmynteyed_1_1_image"><span class="std std-ref">Image</span></a> timestamp. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed7ImgInfo13exposure_timeE">
+<span id="_CPPv3N8mynteyed7ImgInfo13exposure_timeE"></span><span id="_CPPv2N8mynteyed7ImgInfo13exposure_timeE"></span><span id="mynteyed::ImgInfo::exposure_time__std::uint16_t"></span><span class="target" id="structmynteyed_1_1_img_info_1a0be749684c3472a00c74afdda01e5217"></span>std::uint16_t <code class="sig-name descname">exposure_time</code><a class="headerlink" href="#_CPPv4N8mynteyed7ImgInfo13exposure_timeE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="device.html#classmynteyed_1_1_image"><span class="std std-ref">Image</span></a> exposure time. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="imudata">
+<h3>ImuData<a class="headerlink" href="#imudata" title="永久链接至标题">¶</a></h3>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed7ImuDataE">
+<span id="_CPPv3N8mynteyed7ImuDataE"></span><span id="_CPPv2N8mynteyed7ImuDataE"></span><span id="mynteyed::ImuData"></span><span class="target" id="structmynteyed_1_1_imu_data"></span><em class="property">struct </em><code class="sig-name descname">ImuData</code><a class="headerlink" href="#_CPPv4N8mynteyed7ImuDataE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Imu data. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed7ImuData4flagE">
+<span id="_CPPv3N8mynteyed7ImuData4flagE"></span><span id="_CPPv2N8mynteyed7ImuData4flagE"></span><span id="mynteyed::ImuData::flag__std::uint8_t"></span><span class="target" id="structmynteyed_1_1_imu_data_1a9abecc7b310aa0e50671d1d053da9454"></span>std::uint8_t <code class="sig-name descname">flag</code><a class="headerlink" href="#_CPPv4N8mynteyed7ImuData4flagE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Data type MYNTEYE_IMU_ACCEL: accelerometer MYNTEYE_IMU_GYRO: gyroscope. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed7ImuData9timestampE">
+<span id="_CPPv3N8mynteyed7ImuData9timestampE"></span><span id="_CPPv2N8mynteyed7ImuData9timestampE"></span><span id="mynteyed::ImuData::timestamp__std::uint64_t"></span><span class="target" id="structmynteyed_1_1_imu_data_1a9d7ece300b3678335469c727dea6ff0c"></span>std::uint64_t <code class="sig-name descname">timestamp</code><a class="headerlink" href="#_CPPv4N8mynteyed7ImuData9timestampE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Imu gyroscope or accelerometer or frame timestamp. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed7ImuData11temperatureE">
+<span id="_CPPv3N8mynteyed7ImuData11temperatureE"></span><span id="_CPPv2N8mynteyed7ImuData11temperatureE"></span><span id="mynteyed::ImuData::temperature__double"></span><span class="target" id="structmynteyed_1_1_imu_data_1a2d847fc29451a2f2d12899391595286c"></span>double <code class="sig-name descname">temperature</code><a class="headerlink" href="#_CPPv4N8mynteyed7ImuData11temperatureE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>temperature </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed7ImuData5accelE">
+<span id="_CPPv3N8mynteyed7ImuData5accelE"></span><span id="_CPPv2N8mynteyed7ImuData5accelE"></span><span id="mynteyed::ImuData::accel__doubleA"></span><span class="target" id="structmynteyed_1_1_imu_data_1a15e7d8e50770474a6530909e3c468596"></span>double <code class="sig-name descname">accel</code>[3]<a class="headerlink" href="#_CPPv4N8mynteyed7ImuData5accelE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Imu accelerometer data for 3-axis: X, Y, X. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed7ImuData4gyroE">
+<span id="_CPPv3N8mynteyed7ImuData4gyroE"></span><span id="_CPPv2N8mynteyed7ImuData4gyroE"></span><span id="mynteyed::ImuData::gyro__doubleA"></span><span class="target" id="structmynteyed_1_1_imu_data_1aaaefbaf9cc9898943ae404215a50e0c6"></span>double <code class="sig-name descname">gyro</code>[3]<a class="headerlink" href="#_CPPv4N8mynteyed7ImuData4gyroE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Imu gyroscope data for 3-axis: X, Y, Z. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="streamdata">
+<h3>StreamData<a class="headerlink" href="#streamdata" title="永久链接至标题">¶</a></h3>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed10StreamDataE">
+<span id="_CPPv3N8mynteyed10StreamDataE"></span><span id="_CPPv2N8mynteyed10StreamDataE"></span><span id="mynteyed::StreamData"></span><span class="target" id="structmynteyed_1_1_stream_data"></span><em class="property">struct </em><code class="sig-name descname">StreamData</code><a class="headerlink" href="#_CPPv4N8mynteyed10StreamDataE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Stream data. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10StreamData3imgE">
+<span id="_CPPv3N8mynteyed10StreamData3imgE"></span><span id="_CPPv2N8mynteyed10StreamData3imgE"></span><span id="mynteyed::StreamData::img__std::shared_ptr:Image:"></span><span class="target" id="structmynteyed_1_1_stream_data_1a1bfb5074e052036f9edf7147aa6ee879"></span>std::shared_ptr&lt;<a class="reference internal" href="device.html#_CPPv4N8mynteyed5ImageE" title="mynteyed::Image">Image</a>&gt; <code class="sig-name descname">img</code><a class="headerlink" href="#_CPPv4N8mynteyed10StreamData3imgE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="device.html#classmynteyed_1_1_image"><span class="std std-ref">Image</span></a> data. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10StreamData8img_infoE">
+<span id="_CPPv3N8mynteyed10StreamData8img_infoE"></span><span id="_CPPv2N8mynteyed10StreamData8img_infoE"></span><span id="mynteyed::StreamData::img_info__std::shared_ptr:ImgInfo:"></span><span class="target" id="structmynteyed_1_1_stream_data_1a4b26a3f4fd8cc89af453a31b2c84bf3c"></span>std::shared_ptr&lt;<a class="reference internal" href="#_CPPv4N8mynteyed7ImgInfoE" title="mynteyed::ImgInfo">ImgInfo</a>&gt; <code class="sig-name descname">img_info</code><a class="headerlink" href="#_CPPv4N8mynteyed10StreamData8img_infoE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="device.html#classmynteyed_1_1_image"><span class="std std-ref">Image</span></a> information. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="motiondata">
+<h3>MotionData<a class="headerlink" href="#motiondata" title="永久链接至标题">¶</a></h3>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed10MotionDataE">
+<span id="_CPPv3N8mynteyed10MotionDataE"></span><span id="_CPPv2N8mynteyed10MotionDataE"></span><span id="mynteyed::MotionData"></span><span class="target" id="structmynteyed_1_1_motion_data"></span><em class="property">struct </em><code class="sig-name descname">MotionData</code><a class="headerlink" href="#_CPPv4N8mynteyed10MotionDataE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Motion data. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10MotionData3imuE">
+<span id="_CPPv3N8mynteyed10MotionData3imuE"></span><span id="_CPPv2N8mynteyed10MotionData3imuE"></span><span id="mynteyed::MotionData::imu__std::shared_ptr:ImuData:"></span><span class="target" id="structmynteyed_1_1_motion_data_1a0e73450efac406d50400ce209f2a4e16"></span>std::shared_ptr&lt;<a class="reference internal" href="#_CPPv4N8mynteyed7ImuDataE" title="mynteyed::ImuData">ImuData</a>&gt; <code class="sig-name descname">imu</code><a class="headerlink" href="#_CPPv4N8mynteyed10MotionData3imuE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structmynteyed_1_1_imu_data"><span class="std std-ref">ImuData</span></a>. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="calib">
+<h2>Calib<a class="headerlink" href="#calib" title="永久链接至标题">¶</a></h2>
+<div class="section" id="cameraintrinsics">
+<h3>CameraIntrinsics<a class="headerlink" href="#cameraintrinsics" title="永久链接至标题">¶</a></h3>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsicsE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsicsE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsicsE"></span><span id="mynteyed::CameraIntrinsics"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics"></span><em class="property">struct </em><code class="sig-name descname">CameraIntrinsics</code><a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsicsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="camera.html#classmynteyed_1_1_camera"><span class="std std-ref">Camera</span></a> intrinsics: size, coeffs and camera matrix. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsics5widthE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsics5widthE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsics5widthE"></span><span id="mynteyed::CameraIntrinsics::width__std::uint16_t"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics_1a42651b4ebe0024166222cdbc59f45da7"></span>std::uint16_t <code class="sig-name descname">width</code><a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsics5widthE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The width of the image in pixels. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsics6heightE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsics6heightE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsics6heightE"></span><span id="mynteyed::CameraIntrinsics::height__std::uint16_t"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics_1a012c04337882ae1b417c6320041ee3f9"></span>std::uint16_t <code class="sig-name descname">height</code><a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsics6heightE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The height of the image in pixels. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsics2fxE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsics2fxE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsics2fxE"></span><span id="mynteyed::CameraIntrinsics::fx__double"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics_1a4d5044c58db9419c0f8b9a309fbe5a8b"></span>double <code class="sig-name descname">fx</code><a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsics2fxE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The focal length of the image plane, as a multiple of pixel width. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsics2fyE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsics2fyE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsics2fyE"></span><span id="mynteyed::CameraIntrinsics::fy__double"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics_1a671491157c3c195c067012dabc0bfdab"></span>double <code class="sig-name descname">fy</code><a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsics2fyE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The focal length of the image plane, as a multiple of pixel height. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsics2cxE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsics2cxE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsics2cxE"></span><span id="mynteyed::CameraIntrinsics::cx__double"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics_1af427c6dc3244949fcc5a233a0050b7c8"></span>double <code class="sig-name descname">cx</code><a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsics2cxE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The horizontal coordinate of the principal point of the image. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsics2cyE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsics2cyE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsics2cyE"></span><span id="mynteyed::CameraIntrinsics::cy__double"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics_1a976bb95f737c1e6ad74db1dfe6efe83c"></span>double <code class="sig-name descname">cy</code><a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsics2cyE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The vertical coordinate of the principal point of the image. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsics6coeffsE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsics6coeffsE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsics6coeffsE"></span><span id="mynteyed::CameraIntrinsics::coeffs__doubleA"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics_1a46232f3f3d8f086d3a063276c1d3aa90"></span>double <code class="sig-name descname">coeffs</code>[5]<a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsics6coeffsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>The distortion coefficients: k1,k2,p1,p2,k3. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsics1pE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsics1pE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsics1pE"></span><span id="mynteyed::CameraIntrinsics::p__doubleA"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics_1a8bcf890ec64751210f5b52ce14990133"></span>double <code class="sig-name descname">p</code>[12]<a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsics1pE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>3x4 projection matrix in the (rectified) coordinate systems left: fx’ cx’ fy’ cy’ 1 right: fx’ cx’ tx fy’ cy’ 1 </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16CameraIntrinsics1rE">
+<span id="_CPPv3N8mynteyed16CameraIntrinsics1rE"></span><span id="_CPPv2N8mynteyed16CameraIntrinsics1rE"></span><span id="mynteyed::CameraIntrinsics::r__doubleA"></span><span class="target" id="structmynteyed_1_1_camera_intrinsics_1ab6cfbe94da067f5450ea30b670aee975"></span>double <code class="sig-name descname">r</code>[9]<a class="headerlink" href="#_CPPv4N8mynteyed16CameraIntrinsics1rE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>3x3 rectification transform (rotation matrix) for the left camera. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="streamintrinsics">
+<h3>StreamIntrinsics<a class="headerlink" href="#streamintrinsics" title="永久链接至标题">¶</a></h3>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed16StreamIntrinsicsE">
+<span id="_CPPv3N8mynteyed16StreamIntrinsicsE"></span><span id="_CPPv2N8mynteyed16StreamIntrinsicsE"></span><span id="mynteyed::StreamIntrinsics"></span><span class="target" id="structmynteyed_1_1_stream_intrinsics"></span><em class="property">struct </em><code class="sig-name descname">StreamIntrinsics</code><a class="headerlink" href="#_CPPv4N8mynteyed16StreamIntrinsicsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="camera.html#classmynteyed_1_1_camera"><span class="std std-ref">Camera</span></a> intrinsics: size, coeffs and camera matrix. </p>
+</dd></dl>
+
+</div>
+<div class="section" id="imuintrinsics">
+<h3>ImuIntrinsics<a class="headerlink" href="#imuintrinsics" title="永久链接至标题">¶</a></h3>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed13ImuIntrinsicsE">
+<span id="_CPPv3N8mynteyed13ImuIntrinsicsE"></span><span id="_CPPv2N8mynteyed13ImuIntrinsicsE"></span><span id="mynteyed::ImuIntrinsics"></span><span class="target" id="structmynteyed_1_1_imu_intrinsics"></span><em class="property">struct </em><code class="sig-name descname">ImuIntrinsics</code><a class="headerlink" href="#_CPPv4N8mynteyed13ImuIntrinsicsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>IMU intrinsics: scale, drift and variances. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed13ImuIntrinsics5scaleE">
+<span id="_CPPv3N8mynteyed13ImuIntrinsics5scaleE"></span><span id="_CPPv2N8mynteyed13ImuIntrinsics5scaleE"></span><span id="mynteyed::ImuIntrinsics::scale__doubleAA"></span><span class="target" id="structmynteyed_1_1_imu_intrinsics_1a29f47c9506c10521ca89be5bd5e06cc3"></span>double <code class="sig-name descname">scale</code>[3][3]<a class="headerlink" href="#_CPPv4N8mynteyed13ImuIntrinsics5scaleE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Scale matrix. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Scale</span> <span class="n">X</span>     <span class="n">cross</span> <span class="n">axis</span>  <span class="n">cross</span> <span class="n">axis</span>
+<span class="n">cross</span> <span class="n">axis</span>  <span class="n">Scale</span> <span class="n">Y</span>     <span class="n">cross</span> <span class="n">axis</span>
+<span class="n">cross</span> <span class="n">axis</span>  <span class="n">cross</span> <span class="n">axis</span>  <span class="n">Scale</span> <span class="n">Z</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed13ImuIntrinsics8assemblyE">
+<span id="_CPPv3N8mynteyed13ImuIntrinsics8assemblyE"></span><span id="_CPPv2N8mynteyed13ImuIntrinsics8assemblyE"></span><span id="mynteyed::ImuIntrinsics::assembly__doubleAA"></span><span class="target" id="structmynteyed_1_1_imu_intrinsics_1a8a7a8189f1c013fe464db4bf6fe9e3c6"></span>double <code class="sig-name descname">assembly</code>[3][3]<a class="headerlink" href="#_CPPv4N8mynteyed13ImuIntrinsics8assemblyE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Assembly error [3][3]. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed13ImuIntrinsics5noiseE">
+<span id="_CPPv3N8mynteyed13ImuIntrinsics5noiseE"></span><span id="_CPPv2N8mynteyed13ImuIntrinsics5noiseE"></span><span id="mynteyed::ImuIntrinsics::noise__doubleA"></span><span class="target" id="structmynteyed_1_1_imu_intrinsics_1ad69aa8dc3629ed5c90a1a45de8a51945"></span>double <code class="sig-name descname">noise</code>[3]<a class="headerlink" href="#_CPPv4N8mynteyed13ImuIntrinsics5noiseE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Noise density variances. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed13ImuIntrinsics4biasE">
+<span id="_CPPv3N8mynteyed13ImuIntrinsics4biasE"></span><span id="_CPPv2N8mynteyed13ImuIntrinsics4biasE"></span><span id="mynteyed::ImuIntrinsics::bias__doubleA"></span><span class="target" id="structmynteyed_1_1_imu_intrinsics_1a5c22ad3649da42535e79ec6bdaba90ac"></span>double <code class="sig-name descname">bias</code>[3]<a class="headerlink" href="#_CPPv4N8mynteyed13ImuIntrinsics4biasE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Random walk variances. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed13ImuIntrinsics1xE">
+<span id="_CPPv3N8mynteyed13ImuIntrinsics1xE"></span><span id="_CPPv2N8mynteyed13ImuIntrinsics1xE"></span><span id="mynteyed::ImuIntrinsics::x__doubleA"></span><span class="target" id="structmynteyed_1_1_imu_intrinsics_1af9cd974b053fd2818603aa3306aeccb2"></span>double <code class="sig-name descname">x</code>[2]<a class="headerlink" href="#_CPPv4N8mynteyed13ImuIntrinsics1xE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Temperature drift. </p>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span> <span class="o">-</span> <span class="n">Constant</span> <span class="n">value</span>
+<span class="mi">1</span> <span class="o">-</span> <span class="n">Slope</span>
+</pre></div>
+</div>
+ </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="motionintrinsics">
+<h3>MotionIntrinsics<a class="headerlink" href="#motionintrinsics" title="永久链接至标题">¶</a></h3>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed16MotionIntrinsicsE">
+<span id="_CPPv3N8mynteyed16MotionIntrinsicsE"></span><span id="_CPPv2N8mynteyed16MotionIntrinsicsE"></span><span id="mynteyed::MotionIntrinsics"></span><span class="target" id="structmynteyed_1_1_motion_intrinsics"></span><em class="property">struct </em><code class="sig-name descname">MotionIntrinsics</code><a class="headerlink" href="#_CPPv4N8mynteyed16MotionIntrinsicsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Motion intrinsics, including accelerometer and gyroscope. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16MotionIntrinsics5accelE">
+<span id="_CPPv3N8mynteyed16MotionIntrinsics5accelE"></span><span id="_CPPv2N8mynteyed16MotionIntrinsics5accelE"></span><span id="mynteyed::MotionIntrinsics::accel__ImuIntrinsics"></span><span class="target" id="structmynteyed_1_1_motion_intrinsics_1a07b4f1396b290edb96565f0b29061841"></span><a class="reference internal" href="#_CPPv4N8mynteyed13ImuIntrinsicsE" title="mynteyed::ImuIntrinsics">ImuIntrinsics</a> <code class="sig-name descname">accel</code><a class="headerlink" href="#_CPPv4N8mynteyed16MotionIntrinsics5accelE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Accelerometer intrinsics. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed16MotionIntrinsics4gyroE">
+<span id="_CPPv3N8mynteyed16MotionIntrinsics4gyroE"></span><span id="_CPPv2N8mynteyed16MotionIntrinsics4gyroE"></span><span id="mynteyed::MotionIntrinsics::gyro__ImuIntrinsics"></span><span class="target" id="structmynteyed_1_1_motion_intrinsics_1af27ba5a79f24a7419a7c3ca97892f3c0"></span><a class="reference internal" href="#_CPPv4N8mynteyed13ImuIntrinsicsE" title="mynteyed::ImuIntrinsics">ImuIntrinsics</a> <code class="sig-name descname">gyro</code><a class="headerlink" href="#_CPPv4N8mynteyed16MotionIntrinsics4gyroE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Gyroscope intrinsics. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="extrinsics">
+<h3>Extrinsics<a class="headerlink" href="#extrinsics" title="永久链接至标题">¶</a></h3>
+<dl class="cpp struct">
+<dt id="_CPPv4N8mynteyed10ExtrinsicsE">
+<span id="_CPPv3N8mynteyed10ExtrinsicsE"></span><span id="_CPPv2N8mynteyed10ExtrinsicsE"></span><span id="mynteyed::Extrinsics"></span><span class="target" id="structmynteyed_1_1_extrinsics"></span><em class="property">struct </em><code class="sig-name descname">Extrinsics</code><a class="headerlink" href="#_CPPv4N8mynteyed10ExtrinsicsE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#structmynteyed_1_1_extrinsics"><span class="std std-ref">Extrinsics</span></a>, represent how the different datas are connected. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed10Extrinsics7InverseEv">
+<span id="_CPPv3NK8mynteyed10Extrinsics7InverseEv"></span><span id="_CPPv2NK8mynteyed10Extrinsics7InverseEv"></span><span id="mynteyed::Extrinsics::InverseC"></span><span class="target" id="structmynteyed_1_1_extrinsics_1a2ee0b7f2c6910ff4e6320d1e4799a907"></span><a class="reference internal" href="#_CPPv4N8mynteyed10ExtrinsicsE" title="mynteyed::Extrinsics">Extrinsics</a> <code class="sig-name descname">Inverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed10Extrinsics7InverseEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Inverse this extrinsics. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>the inversed extrinsics. </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10Extrinsics8rotationE">
+<span id="_CPPv3N8mynteyed10Extrinsics8rotationE"></span><span id="_CPPv2N8mynteyed10Extrinsics8rotationE"></span><span id="mynteyed::Extrinsics::rotation__doubleAA"></span><span class="target" id="structmynteyed_1_1_extrinsics_1a5bc008292666fdf6bacd54a1c4ab196f"></span>double <code class="sig-name descname">rotation</code>[3][3]<a class="headerlink" href="#_CPPv4N8mynteyed10Extrinsics8rotationE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Rotation matrix left camera to right camera. </p>
+</dd></dl>
+
+<dl class="cpp member">
+<dt id="_CPPv4N8mynteyed10Extrinsics11translationE">
+<span id="_CPPv3N8mynteyed10Extrinsics11translationE"></span><span id="_CPPv2N8mynteyed10Extrinsics11translationE"></span><span id="mynteyed::Extrinsics::translation__doubleA"></span><span class="target" id="structmynteyed_1_1_extrinsics_1aeb1f493f6b2f4a01c668d4e57cec9d99"></span>double <code class="sig-name descname">translation</code>[3]<a class="headerlink" href="#_CPPv4N8mynteyed10Extrinsics11translationE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Translation vector left camera to right camera. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="utils.html" class="btn btn-neutral float-right" title="Utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="enums.html" class="btn btn-neutral float-left" title="Enums" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

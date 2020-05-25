@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CMake 如何使用 SDK &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Visual Studio 2017 如何使用 SDK" href="project_vs2017.html" />
+    <link rel="prev" title="工程引用" href="sdk_projects.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../product/contents.html">产品</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sdk_info.html">SDK 说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_install.html">SDK 安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samples/contents.html">SDK 样例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/contents.html">SDK 工具</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="sdk_projects.html">工程引用</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">CMake 如何使用 SDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project_vs2017.html">Visual Studio 2017 如何使用 SDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project_qtcreator.html">Qt Creator 如何使用 SDK</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_changelog.html">更新日志</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc/contents.html">API DOCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">SDK</a> &raquo;</li>
+        
+          <li><a href="sdk_projects.html">工程引用</a> &raquo;</li>
+        
+      <li>CMake 如何使用 SDK</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/sdk/project_cmake.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cmake-sdk">
+<h1>CMake 如何使用 SDK<a class="headerlink" href="#cmake-sdk" title="永久链接至标题">¶</a></h1>
+<p>本教程将使用 CMake 创建一个项目来使用 SDK 。</p>
+<blockquote>
+<div><p>你可以在 <code class="docutils literal notranslate"><span class="pre">&lt;sdk&gt;/platforms/projects/cmake</span></code> 目录下找到工程样例。</p>
+</div></blockquote>
+<div class="section" id="id1">
+<h2>准备<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>Windows: 安装 SDK 的 exe 包</p></li>
+<li><p>Linux: 使用源代码编译和 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>创建项目<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>添加 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> 和 <code class="docutils literal notranslate"><span class="pre">mynteyed_demo.cc</span></code> 文件，</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">cmake_minimum_required</span><span class="p">(</span><span class="s">VERSION</span> <span class="s">3.0</span><span class="p">)</span>
+
+<span class="nb">project</span><span class="p">(</span><span class="s">mynteyed_demo</span> <span class="s">VERSION</span> <span class="s">1.0.0</span> <span class="s">LANGUAGES</span> <span class="s">C</span> <span class="s">CXX</span><span class="p">)</span>
+
+<span class="c"># flags</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS</span> <span class="s2">&quot;${CMAKE_C_FLAGS} -Wall -O3&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS</span> <span class="s2">&quot;${CMAKE_CXX_FLAGS} -Wall -O3&quot;</span><span class="p">)</span>
+
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_C_FLAGS</span> <span class="s2">&quot;${CMAKE_C_FLAGS} -std=c++11 -march=native&quot;</span><span class="p">)</span>
+<span class="nb">set</span><span class="p">(</span><span class="s">CMAKE_CXX_FLAGS</span> <span class="s2">&quot;${CMAKE_CXX_FLAGS} -std=c++11 -march=native&quot;</span><span class="p">)</span>
+
+<span class="c">## mynteyed_demo</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">mynteyed_demo</span> <span class="s">mynteyed_demo.cc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>配置项目<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>增加 <code class="docutils literal notranslate"><span class="pre">mynteyed</span></code> 和 <code class="docutils literal notranslate"><span class="pre">OpenCV</span></code> 到 <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> ，</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># packages</span>
+
+<span class="nb">if</span><span class="p">(</span><span class="s">MSVC</span><span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span><span class="s">SDK_ROOT</span> <span class="s2">&quot;$ENV{MYNTEYED_SDK_ROOT}&quot;</span><span class="p">)</span>
+  <span class="nb">if</span><span class="p">(</span><span class="s">SDK_ROOT</span><span class="p">)</span>
+    <span class="nb">message</span><span class="p">(</span><span class="s">STATUS</span> <span class="s2">&quot;MYNTEYED_SDK_ROOT: ${SDK_ROOT}&quot;</span><span class="p">)</span>
+    <span class="nb">list</span><span class="p">(</span><span class="s">APPEND</span> <span class="s">CMAKE_PREFIX_PATH</span>
+      <span class="s2">&quot;${SDK_ROOT}/lib/cmake&quot;</span>
+      <span class="s2">&quot;${SDK_ROOT}/3rdparty/opencv/build&quot;</span>
+    <span class="p">)</span>
+  <span class="nb">else</span><span class="p">()</span>
+    <span class="nb">message</span><span class="p">(</span><span class="s">FATAL_ERROR</span> <span class="s2">&quot;MYNTEYED_SDK_ROOT not found, please install SDK firstly&quot;</span><span class="p">)</span>
+  <span class="nb">endif</span><span class="p">()</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="c">## mynteyed</span>
+
+<span class="nb">find_package</span><span class="p">(</span><span class="s">mynteyed</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">message</span><span class="p">(</span><span class="s">STATUS</span> <span class="s2">&quot;Found mynteye: ${mynteyed_VERSION}&quot;</span><span class="p">)</span>
+
+<span class="c"># When SDK build with OpenCV, we can add WITH_OPENCV macro to enable some</span>
+<span class="c"># features depending on OpenCV, such as ToMat().</span>
+<span class="nb">if</span><span class="p">(</span><span class="s">mynteyed_WITH_OPENCV</span><span class="p">)</span>
+  <span class="nb">add_definitions</span><span class="p">(</span><span class="s">-DWITH_OPENCV</span><span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="c">## OpenCV</span>
+
+<span class="c"># Set where to find OpenCV</span>
+<span class="c">#set(OpenCV_DIR &quot;/usr/share/OpenCV&quot;)</span>
+
+<span class="c"># When SDK build with OpenCV, we must find the same version here.</span>
+<span class="nb">find_package</span><span class="p">(</span><span class="s">OpenCV</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="nb">message</span><span class="p">(</span><span class="s">STATUS</span> <span class="s2">&quot;Found OpenCV: ${OpenCV_VERSION}&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>将 <code class="docutils literal notranslate"><span class="pre">include_directories</span></code> 和 <code class="docutils literal notranslate"><span class="pre">target_link_libraries</span></code> 添加到
+<code class="docutils literal notranslate"><span class="pre">mynteyed_demo</span></code> 目标，</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="c"># targets</span>
+
+<span class="nb">include_directories</span><span class="p">(</span>
+  <span class="o">${</span><span class="nv">OpenCV_INCLUDE_DIRS</span><span class="o">}</span>
+<span class="p">)</span>
+
+<span class="c">## mynteyed_demo</span>
+
+<span class="nb">add_executable</span><span class="p">(</span><span class="s">mynteyed_demo</span> <span class="s">mynteyed_demo.cc</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">mynteyed_demo</span> <span class="s">mynteye_depth</span> <span class="o">${</span><span class="nv">OpenCV_LIBS</span><span class="o">}</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sdk">
+<h2>使用SDK<a class="headerlink" href="#sdk" title="永久链接至标题">¶</a></h2>
+<p>可以参考工程样例添加头文件和使用 API 。</p>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="永久链接至标题">¶</a></h3>
+<p>可以参考 <a class="reference internal" href="install_win_src.html#sdk-install-win-src"><span class="std std-ref">Windows 源码安装</span></a>, 安装编译工具。</p>
+<p>然后打开 “x64 Native Tools Command Prompt for VS 2017”
+命令行来编译和运行，</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">mkdir</span> _build
+<span class="k">cd</span> _build
+
+cmake -G <span class="s2">&quot;Visual Studio 15 2017 Win64&quot;</span> ..
+
+msbuild.exe ALL_BUILD.vcxproj /property:Configuration=Release
+
+.\Release\mynteyed_demo.exe
+</pre></div>
+</div>
+</div>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h3>
+<p>打开命令行来编译和运行，</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir _build
+<span class="nb">cd</span> _build/
+
+cmake ..
+
+make
+
+./mynteyed_demo
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="project_vs2017.html" class="btn btn-neutral float-right" title="Visual Studio 2017 如何使用 SDK" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sdk_projects.html" class="btn btn-neutral float-left" title="工程引用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Windows 源码安装 &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Windows EXE 安装" href="install_win_exe.html" />
+    <link rel="prev" title="Ubuntu 源码安装" href="install_ubuntu_src.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../product/contents.html">产品</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sdk_info.html">SDK 说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="sdk_install.html">SDK 安装</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="install_ubuntu_src.html">Ubuntu 源码安装</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Windows 源码安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_win_exe.html">Windows EXE 安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_ros.html">ROS Wrapper 安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_ros_usage.html">ROS Wrapper 说明</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="samples/contents.html">SDK 样例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/contents.html">SDK 工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_projects.html">工程引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_changelog.html">更新日志</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc/contents.html">API DOCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">SDK</a> &raquo;</li>
+        
+          <li><a href="sdk_install.html">SDK 安装</a> &raquo;</li>
+        
+      <li>Windows 源码安装</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/sdk/install_win_src.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="windows">
+<span id="sdk-install-win-src"></span><h1>Windows 源码安装<a class="headerlink" href="#windows" title="永久链接至标题">¶</a></h1>
+<p>以下源码编译安装过程。如果只需使用预编译好的库，请参考 <a class="reference internal" href="install_win_exe.html#sdk-install-win-exe"><span class="std std-ref">Windows EXE 安装</span></a>。</p>
+<div class="section" id="id1">
+<h2>1. 安装编译工具<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="section" id="visual-studio">
+<h3>1.1 安装 Visual Studio<a class="headerlink" href="#visual-studio" title="永久链接至标题">¶</a></h3>
+<p>从 <a class="reference external" href="https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/">https://visualstudio.microsoft.com/zh-hans/vs/older-downloads/</a> 下载并安装。选择c++桌面开发，下载</p>
+<img alt="../_images/vs_install.png" src="../_images/vs_install.png" />
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>支持Visual Studio 2015 和 Visual Studio 2017.</p>
+</div>
+</div>
+<div class="section" id="cmake">
+<h3>1.2 安装 CMake<a class="headerlink" href="#cmake" title="永久链接至标题">¶</a></h3>
+<p>从 <a class="reference external" href="https://cmake.org/">https://cmake.org/</a> 下载并安装</p>
+</div>
+<div class="section" id="msys2">
+<h3>1.3 安装 MSYS2<a class="headerlink" href="#msys2" title="永久链接至标题">¶</a></h3>
+<ol class="arabic simple">
+<li><p>从 <a class="reference external" href="http://mirrors.ustc.edu.cn/msys2/distrib/x86_64/">http://mirrors.ustc.edu.cn/msys2/distrib/x86_64/</a> 下载并安装</p></li>
+<li><p>将 bin 目录的路径添加到系统变量的 PATH 变量列表中 ( <a class="reference external" href="https://jingyan.baidu.com/article/47a29f24610740c0142399ea.html">如何添加系统变量</a> )</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>C<span class="p">:</span><span class="nl">\msys64\usr\bin</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>安装 make ,双击 msys2.exe ,输入下面的命令:</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>pacman -Syu
+pacman -S make
+</pre></div>
+</div>
+<p>安装完成后，可在命令行提示符（Command Prompt）里运行如下命令：</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">&gt;</span>make --version
+GNU Make 4.2.1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="sdk">
+<h2>2. 安装 SDK 依赖<a class="headerlink" href="#sdk" title="永久链接至标题">¶</a></h2>
+<div class="section" id="opencv">
+<h3>2.1 安装 OpenCV<a class="headerlink" href="#opencv" title="永久链接至标题">¶</a></h3>
+<div class="section" id="opencv-recommend">
+<h4>2.1.1 用预先建立的库安装OpenCV (Recommend)<a class="headerlink" href="#opencv-recommend" title="永久链接至标题">¶</a></h4>
+<p><a href="#id2"><span class="problematic" id="id3">*</span></a>更多信息您可以参考 <a class="reference external" href="https://docs.opencv.org/3.4.2/d3/d52/tutorial_windows_install.html">OpenCV 官方文档</a> *</p>
+<ol class="arabic simple">
+<li><p>进入 OpenCV 源码页
+<a class="reference external" href="http://sourceforge.net/projects/opencvlibrary/files/opencv-win/">http://sourceforge.net/projects/opencvlibrary/files/opencv-win/</a></p></li>
+<li><p>下载一个您想要安装的安装包. 例如 3.4.2/opencv-3.4.2-vc14_vc15.exe</p></li>
+<li><p>使用管理员权限运行安装包</p></li>
+<li><p>安装完成之后，设置 OpenCV 环境变量并添加到系统的 path 变量中</p></li>
+</ol>
+</div>
+<div class="section" id="id5">
+<h4>2.1.2 设置环境变量<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
+<p>1.使用管理员权限开启 cmd,  输入以下命令来添加OPENCV_DIR变量到系统变量中:</p>
+<p><em>将 “D:OpenCV” 替换为您自己的解压缩目录</em></p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>setx -m OPENCV_DIR D:\OpenCV\Build\x64\vc14\lib     (Visual Studio 2015 使用该命令)
+setx -m OPENCV_DIR D:\OpenCV\Build\x64\vc15\lib     (Visual Studio 2017 使用该命令)
+</pre></div>
+</div>
+<p>也可以参考 <a class="reference external" href="https://jingyan.baidu.com/article/47a29f24610740c0142399ea.html">如何添加系统变量</a> 将变量手动添加。</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>D<span class="p">:</span><span class="nl">\OpenCV\Build\x64\vc14\lib</span><span class="c1">     (Visual Studio 2015 使用该路径)</span>
+D<span class="p">:</span><span class="nl">\OpenCV\Build\x64\vc15\lib</span><span class="c1">     (Visual Studio 2017 使用该路径)</span>
+</pre></div>
+</div>
+<p>2.将 OpenCV bin 路径添加到系统环境变量的 PATH 变量列表中</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>D<span class="p">:</span><span class="nl">\OpenCV\Build\x64\vc14\bin</span><span class="c1">     (Visual Studio 2015 使用该路径)</span>
+D<span class="p">:</span><span class="nl">\OpenCV\Build\x64\vc15\bin</span><span class="c1">     (Visual Studio 2017 使用该路径)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="libjpeg-turbo">
+<h3>2.2 安装 libjpeg-turbo<a class="headerlink" href="#libjpeg-turbo" title="永久链接至标题">¶</a></h3>
+<ol class="arabic simple">
+<li><p>从 <a class="reference external" href="https://sourceforge.net/projects/libjpeg-turbo/files/">https://sourceforge.net/projects/libjpeg-turbo/files/</a> 下载
+libjpeg-turbo 并安装</p></li>
+<li><p>将 bin 目录的路径添加到系统变量的 PATH 变量列表中</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>C<span class="p">:</span><span class="nl">\libjpeg-turbo64\bin</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pcl">
+<h3>2.3 安装点云例程依赖的 PCL 库 (可选)<a class="headerlink" href="#pcl" title="永久链接至标题">¶</a></h3>
+<p>从 <a class="reference external" href="https://github.com/PointCloudLibrary/pcl/releases">https://github.com/PointCloudLibrary/pcl/releases</a>
+下载集成安装程序(PCL + dependencies)</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>3. 编译 SDK<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>打开 “x64 Native Tools Command Prompt for VS 2017”(适用于 VS 2017 的 x64
+本机工具命令提示) 命令行界面</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/slightech/MYNT-EYE-D-SDK.git
+<span class="k">cd</span> MYNT-EYE-D-SDK
+make all
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<blockquote>
+<div><p>Visual Studio Command Prompt 可以从开始菜单打开，</p>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/vs_cmd_menu.png"><img alt="../_images/vs_cmd_menu.png" src="../_images/vs_cmd_menu.png" style="width: 30%;" /></a>
+<p>也可以从 Visual Studio 的工具菜单里打开，</p>
+<a class="reference internal image-reference" href="../_images/vs_cmd.png"><img alt="../_images/vs_cmd.png" src="../_images/vs_cmd.png" style="width: 40%;" /></a>
+<p>但如 Visual Studio 2015 工具菜单里可能没有，可以自己添加个。</p>
+<p>打开 Tools 的 External Tools… ，然后 Add 如下内容：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Title</p></td>
+<td><p>Visual Studio Command Prompt</p></td>
+</tr>
+<tr class="row-odd"><td><p>Command</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">C:\Windows\System32\cmd.exe</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Arguments</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">/k</span> <span class="pre">&quot;C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\Microsoft</span> <span class="pre">Visual</span> <span class="pre">Studio</span> <span class="pre">14.0\Common7\Tools\VsDevCmd.bat&quot;</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Initial Directory</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">$(SolutionDir)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>4. 运行例程<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>默认打开矫正后的图像。(跑vio时需要使用原图，跑深度或者点云使用矫正后的图像)</p>
+</div>
+<ol class="arabic simple">
+<li><p>get_image 显示左目的图像和彩色深度图 (兼容USB2.0)</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_image.bat
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>get_stereo_image 显示左右目的图像和彩色深度图</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_stereo_image.bat
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>get_depth 显示左目的图像，16UC1的深度图和鼠标选中的像素的深度值(mm)</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_depth.bat
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>get_points 显示左目的图像，16UC1的深度图和点云</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_points.bat
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>get_imu 打印 imu 数据</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_imu
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>get_img_params 打印相机参数并保存在文件中</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_img_params
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>get_imu_params 打印 imu 参数并保存在文件中</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_imu_params
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>get_from_callbacks 使用回调方式获取图像和 imu 数据</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_from_callbacks
+</pre></div>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>get_all_with_options 使用不同参数打开设备</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_all_with_options
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>get_depth_with_filter 显示滤波后的深度图像</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_depth_with_filter
+</pre></div>
+</div>
+<ol class="arabic simple" start="11">
+<li><p>get_points_with_filter 显示滤波后的点云图像</p></li>
+</ol>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>.\samples\_output\bin\get_points_with_filter
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>5. 清理<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">cd</span> <span class="p">&lt;</span>sdk<span class="p">&gt;</span>  # <span class="p">&lt;</span>sdk<span class="p">&gt;</span>为SDK所在路径
+make cleanall
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install_win_exe.html" class="btn btn-neutral float-right" title="Windows EXE 安装" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install_ubuntu_src.html" class="btn btn-neutral float-left" title="Ubuntu 源码安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

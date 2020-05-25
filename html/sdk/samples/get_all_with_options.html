@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>通过选项获取不同类型的数据 &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="获取图像标定参数" href="get_image_params.html" />
+    <link rel="prev" title="从回调接口获取数据" href="get_from_callbacks.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../product/contents.html">产品</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../sdk_info.html">SDK 说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdk_install.html">SDK 安装</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="contents.html">SDK 样例</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="get_stereo_image.html">获取双目图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_image.html">获取双目图像(兼容 USB2.0)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_depth.html">获取深度图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_points.html">获取点云图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_imu.html">获取 IMU 数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_from_callbacks.html">从回调接口获取数据</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">通过选项获取不同类型的数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_image_params.html">获取图像标定参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_imu_params.html">获取 IMU 标定参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_open_params.html">设定打开参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera_control_params.html">相机控制参数 API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="depth_filter.html">使用filter进行深度数据的滤波</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/contents.html">SDK 工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdk_projects.html">工程引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdk_changelog.html">更新日志</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apidoc/contents.html">API DOCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contents.html">SDK</a> &raquo;</li>
+        
+          <li><a href="contents.html">SDK 样例</a> &raquo;</li>
+        
+      <li>通过选项获取不同类型的数据</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sdk/samples/get_all_with_options.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="get-all-with-options">
+<span id="id1"></span><h1>通过选项获取不同类型的数据<a class="headerlink" href="#get-all-with-options" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">get_all_with_options</span></code>
+样例可以通过添加参数来设定当前设备的各类控制值。</p>
+<p><code class="docutils literal notranslate"><span class="pre">get_all_with_options</span> <span class="pre">-h</span></code> 参数说明：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Open device with different options.
+
+Options:
+  -h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
+  -m, --imu             Enable imu datas
+
+  Open Params:
+    The open params
+
+    -i INDEX, --index<span class="o">=</span>INDEX
+                        Device index
+    -f RATE, --rate<span class="o">=</span>RATE
+                        Framerate, range <span class="o">[</span><span class="m">0</span>,60<span class="o">]</span>, <span class="o">[</span><span class="m">30</span><span class="o">](</span>STREAM_2560x720<span class="o">)</span>,
+                        default: <span class="m">10</span>
+    --dev-mode<span class="o">=</span>MODE       Device mode, default <span class="m">2</span> <span class="o">(</span>DEVICE_ALL<span class="o">)</span>
+                          <span class="m">0</span>: DEVICE_COLOR, left y right - depth n
+                          <span class="m">1</span>: DEVICE_DEPTH, left n right n depth y
+                          <span class="m">2</span>: DEVICE_ALL,   left y right - depth y
+                          Note: y: available, n: unavailable, -: depends on
+                        stream mode
+    --cm<span class="o">=</span>MODE           Color mode, default <span class="m">0</span> <span class="o">(</span>COLOR_RAW<span class="o">)</span>
+                          <span class="m">0</span>: COLOR_RAW, color raw
+                          <span class="m">1</span>: COLOR_RECTIFIED, color rectified
+    --dm<span class="o">=</span>MODE           Depth mode, default <span class="m">2</span> <span class="o">(</span>DEPTH_COLORFUL<span class="o">)</span>
+                          <span class="m">0</span>: DEPTH_RAW
+                          <span class="m">1</span>: DEPTH_GRAY
+                          <span class="m">2</span>: DEPTH_COLORFUL
+    --sm<span class="o">=</span>MODE           Stream mode of color <span class="p">&amp;</span> depth,
+                        default <span class="m">2</span> <span class="o">(</span>STREAM_1280x720<span class="o">)</span>
+                          <span class="m">0</span>: STREAM_640x480, 480p, vga, left
+                          <span class="m">1</span>: STREAM_1280x480, 480p, vga, left+right
+                          <span class="m">2</span>: STREAM_1280x720, 720p, hd, left
+                          <span class="m">3</span>: STREAM_2560x720, 720p, hd, left+right
+    --csf<span class="o">=</span>MODE          Stream format of color,
+                        default <span class="m">1</span> <span class="o">(</span>STREAM_YUYV<span class="o">)</span>
+                          <span class="m">0</span>: STREAM_MJPG
+                          <span class="m">1</span>: STREAM_YUYV
+    --dsf<span class="o">=</span>MODE          Stream format of depth,
+                        default <span class="m">1</span> <span class="o">(</span>STREAM_YUYV<span class="o">)</span>
+                          <span class="m">1</span>: STREAM_YUYV
+    --ae                Enable auto-exposure
+    --awb               Enable auto-white balance
+    --ir<span class="o">=</span>VALUE          IR intensity, range <span class="o">[</span><span class="m">0</span>,6<span class="o">]</span>, default <span class="m">0</span>
+    --ir-depth          Enable ir-depth-only
+
+  Feature Toggles:
+    The feature toggles
+
+    --proc<span class="o">=</span>MODE         Enable process mode, e.g. imu assembly, temp_drift
+                          <span class="m">0</span>: PROC_NONE
+                          <span class="m">1</span>: PROC_IMU_ASSEMBLY
+                          <span class="m">2</span>: PROC_IMU_TEMP_DRIFT
+                          <span class="m">3</span>: PROC_IMU_ALL
+    --img-info          Enable image info, and sync with image
+</pre></div>
+</div>
+<p>例如
+<code class="docutils literal notranslate"><span class="pre">./samples/_output/bin/get_all_with_options</span> <span class="pre">-f</span> <span class="pre">60</span> <span class="pre">--dev-mode=0</span> <span class="pre">--sm=2</span></code>
+显示的是1280x720的60帧左目未矫正图像。</p>
+<p>完整代码样例
+<a class="reference external" href="https://github.com/slightech/MYNT-EYE-D-SDK/blob/master/samples/src/get_all_with_options.cc">get_all_with_options.cc</a>
+。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="get_image_params.html" class="btn btn-neutral float-right" title="获取图像标定参数" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="get_from_callbacks.html" class="btn btn-neutral float-left" title="从回调接口获取数据" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

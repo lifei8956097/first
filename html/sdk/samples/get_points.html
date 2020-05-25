@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>获取点云图像 &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="获取 IMU 数据" href="get_imu.html" />
+    <link rel="prev" title="获取深度图像" href="get_depth.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../product/contents.html">产品</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../contents.html">SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../sdk_info.html">SDK 说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdk_install.html">SDK 安装</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="contents.html">SDK 样例</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="get_stereo_image.html">获取双目图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_image.html">获取双目图像(兼容 USB2.0)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_depth.html">获取深度图像</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">获取点云图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_imu.html">获取 IMU 数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_from_callbacks.html">从回调接口获取数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_all_with_options.html">通过选项获取不同类型的数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_image_params.html">获取图像标定参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_imu_params.html">获取 IMU 标定参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_open_params.html">设定打开参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera_control_params.html">相机控制参数 API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="depth_filter.html">使用filter进行深度数据的滤波</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/contents.html">SDK 工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdk_projects.html">工程引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sdk_changelog.html">更新日志</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apidoc/contents.html">API DOCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../contents.html">SDK</a> &raquo;</li>
+        
+          <li><a href="contents.html">SDK 样例</a> &raquo;</li>
+        
+      <li>获取点云图像</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/sdk/samples/get_points.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="get-points">
+<span id="id1"></span><h1>获取点云图像<a class="headerlink" href="#get-points" title="永久链接至标题">¶</a></h1>
+<p>点云图像，属于上层合成数据。API使用<code class="docutils literal notranslate"><span class="pre">GetStreamData()</span></code>获取。另外，判断不为空后再使用。
+运行点云时可以按空格键保存``.ply``文件，然后使用 <code class="docutils literal notranslate"><span class="pre">view_points</span></code> 样例查看 <code class="docutils literal notranslate"><span class="pre">.ply</span></code> 文件。</p>
+<p>参考代码片段：</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="n">image_color</span> <span class="o">=</span> <span class="n">cam</span><span class="p">.</span><span class="n">GetStreamData</span><span class="p">(</span><span class="n">ImageType</span><span class="o">::</span><span class="n">IMAGE_LEFT_COLOR</span><span class="p">);</span>
+<span class="k">auto</span> <span class="n">image_depth</span> <span class="o">=</span> <span class="n">cam</span><span class="p">.</span><span class="n">GetStreamData</span><span class="p">(</span><span class="n">ImageType</span><span class="o">::</span><span class="n">IMAGE_DEPTH</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">image_color</span><span class="p">.</span><span class="n">img</span> <span class="o">&amp;&amp;</span> <span class="n">image_depth</span><span class="p">.</span><span class="n">img</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">cv</span><span class="o">::</span><span class="n">Mat</span> <span class="n">color</span> <span class="o">=</span> <span class="n">image_color</span><span class="p">.</span><span class="n">img</span><span class="o">-&gt;</span><span class="n">To</span><span class="p">(</span><span class="n">ImageFormat</span><span class="o">::</span><span class="n">COLOR_BGR</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="n">ToMat</span><span class="p">();</span>
+    <span class="n">painter</span><span class="p">.</span><span class="n">DrawSize</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">CVPainter</span><span class="o">::</span><span class="n">TOP_LEFT</span><span class="p">);</span>
+    <span class="n">painter</span><span class="p">.</span><span class="n">DrawStreamData</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">image_color</span><span class="p">,</span> <span class="n">CVPainter</span><span class="o">::</span><span class="n">TOP_RIGHT</span><span class="p">);</span>
+    <span class="n">painter</span><span class="p">.</span><span class="n">DrawInformation</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">util</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">counter</span><span class="p">.</span><span class="n">fps</span><span class="p">()),</span>
+        <span class="n">CVPainter</span><span class="o">::</span><span class="n">BOTTOM_RIGHT</span><span class="p">);</span>
+
+    <span class="n">cv</span><span class="o">::</span><span class="n">Mat</span> <span class="n">depth</span> <span class="o">=</span> <span class="n">image_depth</span><span class="p">.</span><span class="n">img</span><span class="o">-&gt;</span><span class="n">To</span><span class="p">(</span><span class="n">ImageFormat</span><span class="o">::</span><span class="n">DEPTH_RAW</span><span class="p">)</span>
+        <span class="o">-&gt;</span><span class="n">ToMat</span><span class="p">();</span>
+
+    <span class="n">cv</span><span class="o">::</span><span class="n">imshow</span><span class="p">(</span><span class="s">&quot;color&quot;</span><span class="p">,</span> <span class="n">color</span><span class="p">);</span>
+
+    <span class="n">viewer</span><span class="p">.</span><span class="n">Update</span><span class="p">(</span><span class="n">color</span><span class="p">,</span> <span class="n">depth</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>上述代码，用了 PCL 来显示点云。关闭点云窗口时，也会结束程序。</p>
+<p>完整代码样例，请见<a class="reference external" href="https://github.com/slightech/MYNT-EYE-D-SDK/blob/master/samples/src/get_points.cc">get_points.cc</a>。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="get_imu.html" class="btn btn-neutral float-right" title="获取 IMU 数据" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="get_depth.html" class="btn btn-neutral float-left" title="获取深度图像" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

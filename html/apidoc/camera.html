@@ -1,0 +1,602 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Camera &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Device" href="device.html" />
+    <link rel="prev" title="API DOCS" href="contents.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../product/contents.html">产品</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/contents.html">SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">API DOCS</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="device.html">Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enums.html">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="types.html">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">API DOCS</a> &raquo;</li>
+        
+      <li>Camera</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/camera.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="camera">
+<h1>Camera<a class="headerlink" href="#camera" title="永久链接至标题">¶</a></h1>
+<dl class="cpp class">
+<dt id="_CPPv4N8mynteyed6CameraE">
+<span id="_CPPv3N8mynteyed6CameraE"></span><span id="_CPPv2N8mynteyed6CameraE"></span><span id="mynteyed::Camera"></span><span class="target" id="classmynteyed_1_1_camera"></span><em class="property">class </em><code class="sig-name descname">Camera</code><a class="headerlink" href="#_CPPv4N8mynteyed6CameraE" title="永久链接至目标">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera14GetDeviceInfosEv">
+<span id="_CPPv3NK8mynteyed6Camera14GetDeviceInfosEv"></span><span id="_CPPv2NK8mynteyed6Camera14GetDeviceInfosEv"></span><span id="mynteyed::Camera::GetDeviceInfosC"></span><span class="target" id="classmynteyed_1_1_camera_1a009e7bd92956d6790716b9be95e9798f"></span>std::vector&lt;<a class="reference internal" href="device.html#_CPPv4N8mynteyed10DeviceInfoE" title="mynteyed::DeviceInfo">DeviceInfo</a>&gt; <code class="sig-name descname">GetDeviceInfos</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera14GetDeviceInfosEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get all device infos. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera14GetDeviceInfosEPNSt6vectorI10DeviceInfoEE">
+<span id="_CPPv3NK8mynteyed6Camera14GetDeviceInfosEPNSt6vectorI10DeviceInfoEE"></span><span id="_CPPv2NK8mynteyed6Camera14GetDeviceInfosEPNSt6vectorI10DeviceInfoEE"></span><span id="mynteyed::Camera::GetDeviceInfos__std::vector:DeviceInfo:PC"></span><span class="target" id="classmynteyed_1_1_camera_1ad559d94f3ffb9bda8b1927ce811c8da9"></span>void <code class="sig-name descname">GetDeviceInfos</code><span class="sig-paren">(</span>std::vector&lt;<a class="reference internal" href="device.html#_CPPv4N8mynteyed10DeviceInfoE" title="mynteyed::DeviceInfo">DeviceInfo</a>&gt; *<em>dev_infos</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera14GetDeviceInfosEPNSt6vectorI10DeviceInfoEE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get all device infos. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera14GetStreamInfosERKNSt7int32_tEPNSt6vectorI10StreamInfoEEPNSt6vectorI10StreamInfoEE">
+<span id="_CPPv3NK8mynteyed6Camera14GetStreamInfosERKNSt7int32_tEPNSt6vectorI10StreamInfoEEPNSt6vectorI10StreamInfoEE"></span><span id="_CPPv2NK8mynteyed6Camera14GetStreamInfosERKNSt7int32_tEPNSt6vectorI10StreamInfoEEPNSt6vectorI10StreamInfoEE"></span><span id="mynteyed::Camera::GetStreamInfos__std::int32_tCR.std::vector:StreamInfo:P.std::vector:StreamInfo:PC"></span><span class="target" id="classmynteyed_1_1_camera_1a0c6877a3c300ffd10ccfe0636451609c"></span>void <code class="sig-name descname">GetStreamInfos</code><span class="sig-paren">(</span><em class="property">const</em> std::int32_t &amp;<em>dev_index</em>, std::vector&lt;<a class="reference internal" href="device.html#_CPPv4N8mynteyed10StreamInfoE" title="mynteyed::StreamInfo">StreamInfo</a>&gt; *<em>color_infos</em>, std::vector&lt;<a class="reference internal" href="device.html#_CPPv4N8mynteyed10StreamInfoE" title="mynteyed::StreamInfo">StreamInfo</a>&gt; *<em>depth_infos</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera14GetStreamInfosERKNSt7int32_tEPNSt6vectorI10StreamInfoEEPNSt6vectorI10StreamInfoEE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get all stream infos. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera4OpenEv">
+<span id="_CPPv3N8mynteyed6Camera4OpenEv"></span><span id="_CPPv2N8mynteyed6Camera4OpenEv"></span><span id="mynteyed::Camera::Open"></span><span class="target" id="classmynteyed_1_1_camera_1a8f088ced93a4f1d734ca84aef8120598"></span><a class="reference internal" href="enums.html#_CPPv4N8mynteyed9ErrorCodeE" title="mynteyed::ErrorCode">ErrorCode</a> <code class="sig-name descname">Open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera4OpenEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Open camera. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera4OpenERK10OpenParams">
+<span id="_CPPv3N8mynteyed6Camera4OpenERK10OpenParams"></span><span id="_CPPv2N8mynteyed6Camera4OpenERK10OpenParams"></span><span id="mynteyed::Camera::Open__OpenParamsCR"></span><span class="target" id="classmynteyed_1_1_camera_1adfb443ba08e9bc613aef364cdb8a5137"></span><a class="reference internal" href="enums.html#_CPPv4N8mynteyed9ErrorCodeE" title="mynteyed::ErrorCode">ErrorCode</a> <code class="sig-name descname">Open</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="device.html#_CPPv4N8mynteyed10OpenParamsE" title="mynteyed::OpenParams">OpenParams</a> &amp;<em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera4OpenERK10OpenParams" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Open camera with params. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera8IsOpenedEv">
+<span id="_CPPv3NK8mynteyed6Camera8IsOpenedEv"></span><span id="_CPPv2NK8mynteyed6Camera8IsOpenedEv"></span><span id="mynteyed::Camera::IsOpenedC"></span><span class="target" id="classmynteyed_1_1_camera_1a180f489dbe706a2de37923d9fb231177"></span>bool <code class="sig-name descname">IsOpened</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera8IsOpenedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor camera is opened or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera13GetOpenParamsEv">
+<span id="_CPPv3NK8mynteyed6Camera13GetOpenParamsEv"></span><span id="_CPPv2NK8mynteyed6Camera13GetOpenParamsEv"></span><span id="mynteyed::Camera::GetOpenParamsC"></span><span class="target" id="classmynteyed_1_1_camera_1a0396d7cf9b92bda3aabd876da9be5433"></span><a class="reference internal" href="device.html#_CPPv4N8mynteyed10OpenParamsE" title="mynteyed::OpenParams">OpenParams</a> <code class="sig-name descname">GetOpenParams</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera13GetOpenParamsEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get open params. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera14GetDescriptorsEv">
+<span id="_CPPv3NK8mynteyed6Camera14GetDescriptorsEv"></span><span id="_CPPv2NK8mynteyed6Camera14GetDescriptorsEv"></span><span id="mynteyed::Camera::GetDescriptorsC"></span><span class="target" id="classmynteyed_1_1_camera_1a28b978ab687c7ee8c776cc4725c6709e"></span>std::shared_ptr&lt;device::Descriptors&gt; <code class="sig-name descname">GetDescriptors</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera14GetDescriptorsEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get all device descriptors. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera13GetDescriptorERK10Descriptor">
+<span id="_CPPv3NK8mynteyed6Camera13GetDescriptorERK10Descriptor"></span><span id="_CPPv2NK8mynteyed6Camera13GetDescriptorERK10Descriptor"></span><span id="mynteyed::Camera::GetDescriptor__DescriptorCRC"></span><span class="target" id="classmynteyed_1_1_camera_1aa376f0b1cbdccc14593beb40a3edc9fa"></span>std::string <code class="sig-name descname">GetDescriptor</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed10DescriptorE" title="mynteyed::Descriptor">Descriptor</a> &amp;<em>desc</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera13GetDescriptorERK10Descriptor" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get one device descriptor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera19GetStreamIntrinsicsERK10StreamMode">
+<span id="_CPPv3NK8mynteyed6Camera19GetStreamIntrinsicsERK10StreamMode"></span><span id="_CPPv2NK8mynteyed6Camera19GetStreamIntrinsicsERK10StreamMode"></span><span id="mynteyed::Camera::GetStreamIntrinsics__StreamModeCRC"></span><span class="target" id="classmynteyed_1_1_camera_1a114c2e447166035a385da6fe002c25ac"></span><a class="reference internal" href="types.html#_CPPv4N8mynteyed16StreamIntrinsicsE" title="mynteyed::StreamIntrinsics">StreamIntrinsics</a> <code class="sig-name descname">GetStreamIntrinsics</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed10StreamModeE" title="mynteyed::StreamMode">StreamMode</a> &amp;<em>stream_mode</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera19GetStreamIntrinsicsERK10StreamMode" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get the intrinsics of camera. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera19GetStreamIntrinsicsERK10StreamModePb">
+<span id="_CPPv3NK8mynteyed6Camera19GetStreamIntrinsicsERK10StreamModePb"></span><span id="_CPPv2NK8mynteyed6Camera19GetStreamIntrinsicsERK10StreamModePb"></span><span id="mynteyed::Camera::GetStreamIntrinsics__StreamModeCR.bPC"></span><span class="target" id="classmynteyed_1_1_camera_1a780428555e53821fadd6dc3b614b9b63"></span><a class="reference internal" href="types.html#_CPPv4N8mynteyed16StreamIntrinsicsE" title="mynteyed::StreamIntrinsics">StreamIntrinsics</a> <code class="sig-name descname">GetStreamIntrinsics</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed10StreamModeE" title="mynteyed::StreamMode">StreamMode</a> &amp;<em>stream_mode</em>, bool *<em>ok</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera19GetStreamIntrinsicsERK10StreamModePb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get the intrinsics of camera. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera19GetStreamExtrinsicsERK10StreamMode">
+<span id="_CPPv3NK8mynteyed6Camera19GetStreamExtrinsicsERK10StreamMode"></span><span id="_CPPv2NK8mynteyed6Camera19GetStreamExtrinsicsERK10StreamMode"></span><span id="mynteyed::Camera::GetStreamExtrinsics__StreamModeCRC"></span><span class="target" id="classmynteyed_1_1_camera_1a5bb35a903e3d05580cb4466abf28d577"></span>StreamExtrinsics <code class="sig-name descname">GetStreamExtrinsics</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed10StreamModeE" title="mynteyed::StreamMode">StreamMode</a> &amp;<em>stream_mode</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera19GetStreamExtrinsicsERK10StreamMode" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get the extrinsics of camera. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera19GetStreamExtrinsicsERK10StreamModePb">
+<span id="_CPPv3NK8mynteyed6Camera19GetStreamExtrinsicsERK10StreamModePb"></span><span id="_CPPv2NK8mynteyed6Camera19GetStreamExtrinsicsERK10StreamModePb"></span><span id="mynteyed::Camera::GetStreamExtrinsics__StreamModeCR.bPC"></span><span class="target" id="classmynteyed_1_1_camera_1ac992e9a0f3c5afdc34aee01f37a6a5c0"></span>StreamExtrinsics <code class="sig-name descname">GetStreamExtrinsics</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed10StreamModeE" title="mynteyed::StreamMode">StreamMode</a> &amp;<em>stream_mode</em>, bool *<em>ok</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera19GetStreamExtrinsicsERK10StreamModePb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get the extrinsics of camera. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera29WriteCameraCalibrationBinFileERKNSt6stringE">
+<span id="_CPPv3N8mynteyed6Camera29WriteCameraCalibrationBinFileERKNSt6stringE"></span><span id="_CPPv2N8mynteyed6Camera29WriteCameraCalibrationBinFileERKNSt6stringE"></span><span id="mynteyed::Camera::WriteCameraCalibrationBinFile__ssCR"></span><span class="target" id="classmynteyed_1_1_camera_1adfc12383275114053f14e0674305859c"></span>bool <code class="sig-name descname">WriteCameraCalibrationBinFile</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera29WriteCameraCalibrationBinFileERKNSt6stringE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Write camera calibration bin file. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera19GetMotionIntrinsicsEv">
+<span id="_CPPv3NK8mynteyed6Camera19GetMotionIntrinsicsEv"></span><span id="_CPPv2NK8mynteyed6Camera19GetMotionIntrinsicsEv"></span><span id="mynteyed::Camera::GetMotionIntrinsicsC"></span><span class="target" id="classmynteyed_1_1_camera_1a794b38f31f65477d3ce1bfece8f4ade2"></span><a class="reference internal" href="types.html#_CPPv4N8mynteyed16MotionIntrinsicsE" title="mynteyed::MotionIntrinsics">MotionIntrinsics</a> <code class="sig-name descname">GetMotionIntrinsics</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera19GetMotionIntrinsicsEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get the intrinsics of motion. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera19GetMotionIntrinsicsEPb">
+<span id="_CPPv3NK8mynteyed6Camera19GetMotionIntrinsicsEPb"></span><span id="_CPPv2NK8mynteyed6Camera19GetMotionIntrinsicsEPb"></span><span id="mynteyed::Camera::GetMotionIntrinsics__bPC"></span><span class="target" id="classmynteyed_1_1_camera_1adf6a087898161979d127b0eeec3c160f"></span><a class="reference internal" href="types.html#_CPPv4N8mynteyed16MotionIntrinsicsE" title="mynteyed::MotionIntrinsics">MotionIntrinsics</a> <code class="sig-name descname">GetMotionIntrinsics</code><span class="sig-paren">(</span>bool *<em>ok</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera19GetMotionIntrinsicsEPb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get the intrinsics of motion. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera19GetMotionExtrinsicsEv">
+<span id="_CPPv3NK8mynteyed6Camera19GetMotionExtrinsicsEv"></span><span id="_CPPv2NK8mynteyed6Camera19GetMotionExtrinsicsEv"></span><span id="mynteyed::Camera::GetMotionExtrinsicsC"></span><span class="target" id="classmynteyed_1_1_camera_1a876375b8631b8d7794d7e6b90be5ae90"></span>MotionExtrinsics <code class="sig-name descname">GetMotionExtrinsics</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera19GetMotionExtrinsicsEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get the extrinsics from left to motion. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera19GetMotionExtrinsicsEPb">
+<span id="_CPPv3NK8mynteyed6Camera19GetMotionExtrinsicsEPb"></span><span id="_CPPv2NK8mynteyed6Camera19GetMotionExtrinsicsEPb"></span><span id="mynteyed::Camera::GetMotionExtrinsics__bPC"></span><span class="target" id="classmynteyed_1_1_camera_1ad7b94e9724835e97b16806c4fc3f5325"></span>MotionExtrinsics <code class="sig-name descname">GetMotionExtrinsics</code><span class="sig-paren">(</span>bool *<em>ok</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera19GetMotionExtrinsicsEPb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get the extrinsics from left to motion. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera22IsWriteDeviceSupportedEv">
+<span id="_CPPv3NK8mynteyed6Camera22IsWriteDeviceSupportedEv"></span><span id="_CPPv2NK8mynteyed6Camera22IsWriteDeviceSupportedEv"></span><span id="mynteyed::Camera::IsWriteDeviceSupportedC"></span><span class="target" id="classmynteyed_1_1_camera_1a031a6e5f94f8f9f305998570c5952c72"></span>bool <code class="sig-name descname">IsWriteDeviceSupported</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera22IsWriteDeviceSupportedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor write device supported or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera16WriteDeviceFlashEPN6device11DescriptorsEPN6device9ImuParamsEP7Version">
+<span id="_CPPv3N8mynteyed6Camera16WriteDeviceFlashEPN6device11DescriptorsEPN6device9ImuParamsEP7Version"></span><span id="_CPPv2N8mynteyed6Camera16WriteDeviceFlashEPN6device11DescriptorsEPN6device9ImuParamsEP7Version"></span><span id="mynteyed::Camera::WriteDeviceFlash__device::DescriptorsP.device::ImuParamsP.VersionP"></span><span class="target" id="classmynteyed_1_1_camera_1acee05b01e01b44b27b6140b9019c2ef1"></span>bool <code class="sig-name descname">WriteDeviceFlash</code><span class="sig-paren">(</span>device::Descriptors *<em>desc</em>, device::ImuParams *<em>imu_params</em>, Version *<em>spec_version</em> = nullptr<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera16WriteDeviceFlashEPN6device11DescriptorsEPN6device9ImuParamsEP7Version" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Write device flash. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera17EnableProcessModeERK11ProcessMode">
+<span id="_CPPv3N8mynteyed6Camera17EnableProcessModeERK11ProcessMode"></span><span id="_CPPv2N8mynteyed6Camera17EnableProcessModeERK11ProcessMode"></span><span id="mynteyed::Camera::EnableProcessMode__ProcessModeCR"></span><span class="target" id="classmynteyed_1_1_camera_1acbaa3cb2624d985b61d0e67472b727c9"></span>void <code class="sig-name descname">EnableProcessMode</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed11ProcessModeE" title="mynteyed::ProcessMode">ProcessMode</a> &amp;<em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera17EnableProcessModeERK11ProcessMode" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Enable process mode, e.g. </p>
+<p>imu assembly, temp_drift </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera17EnableProcessModeERKNSt7int32_tE">
+<span id="_CPPv3N8mynteyed6Camera17EnableProcessModeERKNSt7int32_tE"></span><span id="_CPPv2N8mynteyed6Camera17EnableProcessModeERKNSt7int32_tE"></span><span id="mynteyed::Camera::EnableProcessMode__std::int32_tCR"></span><span class="target" id="classmynteyed_1_1_camera_1a18d3b096788171564e5439b32c640c8f"></span>void <code class="sig-name descname">EnableProcessMode</code><span class="sig-paren">(</span><em class="property">const</em> std::int32_t &amp;<em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera17EnableProcessModeERKNSt7int32_tE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Enable process mode, e.g. </p>
+<p>imu assembly, temp_drift </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera20IsImageInfoSupportedEv">
+<span id="_CPPv3NK8mynteyed6Camera20IsImageInfoSupportedEv"></span><span id="_CPPv2NK8mynteyed6Camera20IsImageInfoSupportedEv"></span><span id="mynteyed::Camera::IsImageInfoSupportedC"></span><span class="target" id="classmynteyed_1_1_camera_1ab2f92ffcd36974d50ee66efc426d7c10"></span>bool <code class="sig-name descname">IsImageInfoSupported</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera20IsImageInfoSupportedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor image info supported or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera15EnableImageInfoEb">
+<span id="_CPPv3N8mynteyed6Camera15EnableImageInfoEb"></span><span id="_CPPv2N8mynteyed6Camera15EnableImageInfoEb"></span><span id="mynteyed::Camera::EnableImageInfo__b"></span><span class="target" id="classmynteyed_1_1_camera_1a7769c7a8b0805bc0bd03886bbe4b987f"></span>void <code class="sig-name descname">EnableImageInfo</code><span class="sig-paren">(</span>bool <em>sync</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera15EnableImageInfoEb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Enable image infos. </p>
+<p>If sync is false, indicates only can get infos from callback. If sync is true, indicates can get infos from callback or access it from <a class="reference internal" href="types.html#structmynteyed_1_1_stream_data"><span class="std std-ref">StreamData</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera16DisableImageInfoEv">
+<span id="_CPPv3N8mynteyed6Camera16DisableImageInfoEv"></span><span id="_CPPv2N8mynteyed6Camera16DisableImageInfoEv"></span><span id="mynteyed::Camera::DisableImageInfo"></span><span class="target" id="classmynteyed_1_1_camera_1ada38cff96e2f5f6e4eb009bf65b79dd2"></span>void <code class="sig-name descname">DisableImageInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera16DisableImageInfoEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Disable image info. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera18IsImageInfoEnabledEv">
+<span id="_CPPv3NK8mynteyed6Camera18IsImageInfoEnabledEv"></span><span id="_CPPv2NK8mynteyed6Camera18IsImageInfoEnabledEv"></span><span id="mynteyed::Camera::IsImageInfoEnabledC"></span><span class="target" id="classmynteyed_1_1_camera_1a6c2dea8d0ce00c795a4298947a1644c8"></span>bool <code class="sig-name descname">IsImageInfoEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera18IsImageInfoEnabledEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor image info enabled or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera17IsImageInfoSyncedEv">
+<span id="_CPPv3NK8mynteyed6Camera17IsImageInfoSyncedEv"></span><span id="_CPPv2NK8mynteyed6Camera17IsImageInfoSyncedEv"></span><span id="mynteyed::Camera::IsImageInfoSyncedC"></span><span class="target" id="classmynteyed_1_1_camera_1a5df34f1c5e3f10cc0816b66a3e000c66"></span>bool <code class="sig-name descname">IsImageInfoSynced</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera17IsImageInfoSyncedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor image info synced or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera19IsStreamDataEnabledERK9ImageType">
+<span id="_CPPv3NK8mynteyed6Camera19IsStreamDataEnabledERK9ImageType"></span><span id="_CPPv2NK8mynteyed6Camera19IsStreamDataEnabledERK9ImageType"></span><span id="mynteyed::Camera::IsStreamDataEnabled__ImageTypeCRC"></span><span class="target" id="classmynteyed_1_1_camera_1a603b39439add1c002f50e4c61911c7d0"></span>bool <code class="sig-name descname">IsStreamDataEnabled</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed9ImageTypeE" title="mynteyed::ImageType">ImageType</a> &amp;<em>type</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera19IsStreamDataEnabledERK9ImageType" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor stream data of certain image type enabled or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera20HasStreamDataEnabledEv">
+<span id="_CPPv3NK8mynteyed6Camera20HasStreamDataEnabledEv"></span><span id="_CPPv2NK8mynteyed6Camera20HasStreamDataEnabledEv"></span><span id="mynteyed::Camera::HasStreamDataEnabledC"></span><span class="target" id="classmynteyed_1_1_camera_1a71f085fe22f79f8042dc6fb7f1a835c7"></span>bool <code class="sig-name descname">HasStreamDataEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera20HasStreamDataEnabledEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Has any stream data enabled. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera13GetStreamDataERK9ImageType">
+<span id="_CPPv3N8mynteyed6Camera13GetStreamDataERK9ImageType"></span><span id="_CPPv2N8mynteyed6Camera13GetStreamDataERK9ImageType"></span><span id="mynteyed::Camera::GetStreamData__ImageTypeCR"></span><span class="target" id="classmynteyed_1_1_camera_1a99be695a17627eabfb23b7f0ff78ae34"></span><a class="reference internal" href="types.html#_CPPv4N8mynteyed10StreamDataE" title="mynteyed::StreamData">StreamData</a> <code class="sig-name descname">GetStreamData</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed9ImageTypeE" title="mynteyed::ImageType">ImageType</a> &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera13GetStreamDataERK9ImageType" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get latest stream data. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera14GetStreamDatasERK9ImageType">
+<span id="_CPPv3N8mynteyed6Camera14GetStreamDatasERK9ImageType"></span><span id="_CPPv2N8mynteyed6Camera14GetStreamDatasERK9ImageType"></span><span id="mynteyed::Camera::GetStreamDatas__ImageTypeCR"></span><span class="target" id="classmynteyed_1_1_camera_1ae66baf82a651392d7780ac5e53fd3b14"></span>std::vector&lt;<a class="reference internal" href="types.html#_CPPv4N8mynteyed10StreamDataE" title="mynteyed::StreamData">StreamData</a>&gt; <code class="sig-name descname">GetStreamDatas</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed9ImageTypeE" title="mynteyed::ImageType">ImageType</a> &amp;<em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera14GetStreamDatasERK9ImageType" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get cached stream datas. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera22IsMotionDatasSupportedEv">
+<span id="_CPPv3NK8mynteyed6Camera22IsMotionDatasSupportedEv"></span><span id="_CPPv2NK8mynteyed6Camera22IsMotionDatasSupportedEv"></span><span id="mynteyed::Camera::IsMotionDatasSupportedC"></span><span class="target" id="classmynteyed_1_1_camera_1a571dc87dcf7d410a0d06fd7755b8e3d1"></span>bool <code class="sig-name descname">IsMotionDatasSupported</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera22IsMotionDatasSupportedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor motion datas supported or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera17EnableMotionDatasENSt6size_tE">
+<span id="_CPPv3N8mynteyed6Camera17EnableMotionDatasENSt6size_tE"></span><span id="_CPPv2N8mynteyed6Camera17EnableMotionDatasENSt6size_tE"></span><span id="mynteyed::Camera::EnableMotionDatas__std::s"></span><span class="target" id="classmynteyed_1_1_camera_1ae803009c37d783b8b30529ff8a9ab435"></span>void <code class="sig-name descname">EnableMotionDatas</code><span class="sig-paren">(</span>std::size_t <em>max_size</em> = std::numeric_limits&lt;std::size_t&gt;::max()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera17EnableMotionDatasENSt6size_tE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Enable motion datas. </p>
+<p>If max_size &lt;= 0, indicates only can get datas from callback. If max_size &gt; 0, indicates can get datas from callback or using <a class="reference internal" href="#classmynteyed_1_1_camera_1aa995cddc411842e812b80a0f60b02432"><span class="std std-ref">GetMotionDatas()</span></a>.</p>
+<p>Note: if max_size &gt; 0, the motion datas will be cached until you call <a class="reference internal" href="#classmynteyed_1_1_camera_1aa995cddc411842e812b80a0f60b02432"><span class="std std-ref">GetMotionDatas()</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera18DisableMotionDatasEv">
+<span id="_CPPv3N8mynteyed6Camera18DisableMotionDatasEv"></span><span id="_CPPv2N8mynteyed6Camera18DisableMotionDatasEv"></span><span id="mynteyed::Camera::DisableMotionDatas"></span><span class="target" id="classmynteyed_1_1_camera_1a9fecffe1b92115429a3081a0b3c271dc"></span>void <code class="sig-name descname">DisableMotionDatas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera18DisableMotionDatasEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Disable motion datas. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera20IsMotionDatasEnabledEv">
+<span id="_CPPv3NK8mynteyed6Camera20IsMotionDatasEnabledEv"></span><span id="_CPPv2NK8mynteyed6Camera20IsMotionDatasEnabledEv"></span><span id="mynteyed::Camera::IsMotionDatasEnabledC"></span><span class="target" id="classmynteyed_1_1_camera_1aa548da2c8c5916329daeb572b34ffd7b"></span>bool <code class="sig-name descname">IsMotionDatasEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera20IsMotionDatasEnabledEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor motion datas enabled or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera14GetMotionDatasEv">
+<span id="_CPPv3N8mynteyed6Camera14GetMotionDatasEv"></span><span id="_CPPv2N8mynteyed6Camera14GetMotionDatasEv"></span><span id="mynteyed::Camera::GetMotionDatas"></span><span class="target" id="classmynteyed_1_1_camera_1aa995cddc411842e812b80a0f60b02432"></span>std::vector&lt;<a class="reference internal" href="types.html#_CPPv4N8mynteyed10MotionDataE" title="mynteyed::MotionData">MotionData</a>&gt; <code class="sig-name descname">GetMotionDatas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera14GetMotionDatasEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get cached motion datas. </p>
+<p>Besides, you can also get them from callback </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera18SetImgInfoCallbackE19img_info_callback_tb">
+<span id="_CPPv3N8mynteyed6Camera18SetImgInfoCallbackE19img_info_callback_tb"></span><span id="_CPPv2N8mynteyed6Camera18SetImgInfoCallbackE19img_info_callback_tb"></span><span id="mynteyed::Camera::SetImgInfoCallback__img_info_callback_t.b"></span><span class="target" id="classmynteyed_1_1_camera_1a70de9783fa56ed094caa06fb721f9eb1"></span>void <code class="sig-name descname">SetImgInfoCallback</code><span class="sig-paren">(</span>img_info_callback_t <em>callback</em>, bool <em>async</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera18SetImgInfoCallbackE19img_info_callback_tb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Set image info callback. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera17SetStreamCallbackERK9ImageType17stream_callback_tb">
+<span id="_CPPv3N8mynteyed6Camera17SetStreamCallbackERK9ImageType17stream_callback_tb"></span><span id="_CPPv2N8mynteyed6Camera17SetStreamCallbackERK9ImageType17stream_callback_tb"></span><span id="mynteyed::Camera::SetStreamCallback__ImageTypeCR.stream_callback_t.b"></span><span class="target" id="classmynteyed_1_1_camera_1a5765c1be26202f524b959601c484089b"></span>void <code class="sig-name descname">SetStreamCallback</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="enums.html#_CPPv4N8mynteyed9ImageTypeE" title="mynteyed::ImageType">ImageType</a> &amp;<em>type</em>, stream_callback_t <em>callback</em>, bool <em>async</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera17SetStreamCallbackERK9ImageType17stream_callback_tb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Set stream data callback. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera17SetMotionCallbackE17motion_callback_tb">
+<span id="_CPPv3N8mynteyed6Camera17SetMotionCallbackE17motion_callback_tb"></span><span id="_CPPv2N8mynteyed6Camera17SetMotionCallbackE17motion_callback_tb"></span><span id="mynteyed::Camera::SetMotionCallback__motion_callback_t.b"></span><span class="target" id="classmynteyed_1_1_camera_1acebc8a17edc17825f16f67a50f3cf643"></span>void <code class="sig-name descname">SetMotionCallback</code><span class="sig-paren">(</span>motion_callback_t <em>callback</em>, bool <em>async</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera17SetMotionCallbackE17motion_callback_tb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Set motion data callback. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera5CloseEv">
+<span id="_CPPv3N8mynteyed6Camera5CloseEv"></span><span id="_CPPv2N8mynteyed6Camera5CloseEv"></span><span id="mynteyed::Camera::Close"></span><span class="target" id="classmynteyed_1_1_camera_1a8824cafc079668aace1c80b3b755c044"></span>void <code class="sig-name descname">Close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera5CloseEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Close the camera. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera15SetExposureTimeERKf">
+<span id="_CPPv3N8mynteyed6Camera15SetExposureTimeERKf"></span><span id="_CPPv2N8mynteyed6Camera15SetExposureTimeERKf"></span><span id="mynteyed::Camera::SetExposureTime__floatCR"></span><span class="target" id="classmynteyed_1_1_camera_1a35eafe8d4bc801a39e8c153c8c3f90d6"></span>void <code class="sig-name descname">SetExposureTime</code><span class="sig-paren">(</span><em class="property">const</em> float &amp;<em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera15SetExposureTimeERKf" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Set exposure time [1ms - 655ms] value  exposure time value. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera15GetExposureTimeERf">
+<span id="_CPPv3N8mynteyed6Camera15GetExposureTimeERf"></span><span id="_CPPv2N8mynteyed6Camera15GetExposureTimeERf"></span><span id="mynteyed::Camera::GetExposureTime__floatR"></span><span class="target" id="classmynteyed_1_1_camera_1a52d6fa008facc6e094ac7371234c2c76"></span>void <code class="sig-name descname">GetExposureTime</code><span class="sig-paren">(</span>float &amp;<em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera15GetExposureTimeERf" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get exposure time value  return exposure time value. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera13SetGlobalGainERKf">
+<span id="_CPPv3N8mynteyed6Camera13SetGlobalGainERKf"></span><span id="_CPPv2N8mynteyed6Camera13SetGlobalGainERKf"></span><span id="mynteyed::Camera::SetGlobalGain__floatCR"></span><span class="target" id="classmynteyed_1_1_camera_1ae00354cda143fa1780138fbcea205437"></span>void <code class="sig-name descname">SetGlobalGain</code><span class="sig-paren">(</span><em class="property">const</em> float &amp;<em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera13SetGlobalGainERKf" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Set global gain [1 - 16] value  global gain value. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera13GetGlobalGainERf">
+<span id="_CPPv3N8mynteyed6Camera13GetGlobalGainERf"></span><span id="_CPPv2N8mynteyed6Camera13GetGlobalGainERf"></span><span id="mynteyed::Camera::GetGlobalGain__floatR"></span><span class="target" id="classmynteyed_1_1_camera_1a281b550865a1cd2c4906055529b5a801"></span>void <code class="sig-name descname">GetGlobalGain</code><span class="sig-paren">(</span>float &amp;<em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera13GetGlobalGainERf" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get global gain value  return global gain value. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera14SetIRIntensityERKNSt8uint16_tE">
+<span id="_CPPv3N8mynteyed6Camera14SetIRIntensityERKNSt8uint16_tE"></span><span id="_CPPv2N8mynteyed6Camera14SetIRIntensityERKNSt8uint16_tE"></span><span id="mynteyed::Camera::SetIRIntensity__std::uint16_tCR"></span><span class="target" id="classmynteyed_1_1_camera_1a1100396f035c9e9c55724a901807f4e2"></span>void <code class="sig-name descname">SetIRIntensity</code><span class="sig-paren">(</span><em class="property">const</em> std::uint16_t &amp;<em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera14SetIRIntensityERKNSt8uint16_tE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>set infrared(IR) intensity [0, 10] default 4 </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera19AutoExposureControlEb">
+<span id="_CPPv3N8mynteyed6Camera19AutoExposureControlEb"></span><span id="_CPPv2N8mynteyed6Camera19AutoExposureControlEb"></span><span id="mynteyed::Camera::AutoExposureControl__b"></span><span class="target" id="classmynteyed_1_1_camera_1ab3d05aba0e5f96c5a18c5271b1854d1e"></span>bool <code class="sig-name descname">AutoExposureControl</code><span class="sig-paren">(</span>bool <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera19AutoExposureControlEb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Auto-exposure enabled or not default enabled. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera23AutoWhiteBalanceControlEb">
+<span id="_CPPv3N8mynteyed6Camera23AutoWhiteBalanceControlEb"></span><span id="_CPPv2N8mynteyed6Camera23AutoWhiteBalanceControlEb"></span><span id="mynteyed::Camera::AutoWhiteBalanceControl__b"></span><span class="target" id="classmynteyed_1_1_camera_1ac1b9299ae7b41bcf61fd30533deebbe6"></span>bool <code class="sig-name descname">AutoWhiteBalanceControl</code><span class="sig-paren">(</span>bool <em>enable</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera23AutoWhiteBalanceControlEb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Auto-white-balance enabled or not default enabled. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera24IsLocationDatasSupportedEv">
+<span id="_CPPv3NK8mynteyed6Camera24IsLocationDatasSupportedEv"></span><span id="_CPPv2NK8mynteyed6Camera24IsLocationDatasSupportedEv"></span><span id="mynteyed::Camera::IsLocationDatasSupportedC"></span><span class="target" id="classmynteyed_1_1_camera_1acae7d53dbf6926de98c7f96c3d135f9b"></span>bool <code class="sig-name descname">IsLocationDatasSupported</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera24IsLocationDatasSupportedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor location datas supported or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera19EnableLocationDatasENSt6size_tE">
+<span id="_CPPv3N8mynteyed6Camera19EnableLocationDatasENSt6size_tE"></span><span id="_CPPv2N8mynteyed6Camera19EnableLocationDatasENSt6size_tE"></span><span id="mynteyed::Camera::EnableLocationDatas__std::s"></span><span class="target" id="classmynteyed_1_1_camera_1a7d9034aafeac2b7d4b79a13ed0b65e30"></span>void <code class="sig-name descname">EnableLocationDatas</code><span class="sig-paren">(</span>std::size_t <em>max_size</em> = std::numeric_limits&lt;std::size_t&gt;::max()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera19EnableLocationDatasENSt6size_tE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>↩ Enable location datas. </p>
+<p>If max_size &lt;= 0, indicates only can get datas from callback. If max_size &gt; 0, indicates can get datas from callback or using <a class="reference internal" href="#classmynteyed_1_1_camera_1a56b2e0c0ee8b8a08bfaa07624616f54d"><span class="std std-ref">GetLocationDatas()</span></a>.</p>
+<p>Note: if max_size &gt; 0, the distance datas will be cached until you call <a class="reference internal" href="#classmynteyed_1_1_camera_1a56b2e0c0ee8b8a08bfaa07624616f54d"><span class="std std-ref">GetLocationDatas()</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera20DisableLocationDatasEv">
+<span id="_CPPv3N8mynteyed6Camera20DisableLocationDatasEv"></span><span id="_CPPv2N8mynteyed6Camera20DisableLocationDatasEv"></span><span id="mynteyed::Camera::DisableLocationDatas"></span><span class="target" id="classmynteyed_1_1_camera_1a9c9659272fe087b9130525abe6496e4e"></span>void <code class="sig-name descname">DisableLocationDatas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera20DisableLocationDatasEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Disable location datas. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera22IsLocationDatasEnabledEv">
+<span id="_CPPv3NK8mynteyed6Camera22IsLocationDatasEnabledEv"></span><span id="_CPPv2NK8mynteyed6Camera22IsLocationDatasEnabledEv"></span><span id="mynteyed::Camera::IsLocationDatasEnabledC"></span><span class="target" id="classmynteyed_1_1_camera_1a5aae85c58a06001b2c39e65491edd686"></span>bool <code class="sig-name descname">IsLocationDatasEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera22IsLocationDatasEnabledEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor location datas enabled or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera16GetLocationDatasEv">
+<span id="_CPPv3N8mynteyed6Camera16GetLocationDatasEv"></span><span id="_CPPv2N8mynteyed6Camera16GetLocationDatasEv"></span><span id="mynteyed::Camera::GetLocationDatas"></span><span class="target" id="classmynteyed_1_1_camera_1a56b2e0c0ee8b8a08bfaa07624616f54d"></span>std::vector&lt;LocationData&gt; <code class="sig-name descname">GetLocationDatas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera16GetLocationDatasEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get cached location datas. </p>
+<p>Besides, you can also get them from callback </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera19SetLocationCallbackE19location_callback_tb">
+<span id="_CPPv3N8mynteyed6Camera19SetLocationCallbackE19location_callback_tb"></span><span id="_CPPv2N8mynteyed6Camera19SetLocationCallbackE19location_callback_tb"></span><span id="mynteyed::Camera::SetLocationCallback__location_callback_t.b"></span><span class="target" id="classmynteyed_1_1_camera_1abec86b2b477f454e1eeb4e205585229e"></span>void <code class="sig-name descname">SetLocationCallback</code><span class="sig-paren">(</span>location_callback_t <em>callback</em>, bool <em>async</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera19SetLocationCallbackE19location_callback_tb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Set location data callback. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera24IsDistanceDatasSupportedEv">
+<span id="_CPPv3NK8mynteyed6Camera24IsDistanceDatasSupportedEv"></span><span id="_CPPv2NK8mynteyed6Camera24IsDistanceDatasSupportedEv"></span><span id="mynteyed::Camera::IsDistanceDatasSupportedC"></span><span class="target" id="classmynteyed_1_1_camera_1ad1171857526b599794d90f27e5b1c80c"></span>bool <code class="sig-name descname">IsDistanceDatasSupported</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera24IsDistanceDatasSupportedEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor distance datas supported or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera19EnableDistanceDatasENSt6size_tE">
+<span id="_CPPv3N8mynteyed6Camera19EnableDistanceDatasENSt6size_tE"></span><span id="_CPPv2N8mynteyed6Camera19EnableDistanceDatasENSt6size_tE"></span><span id="mynteyed::Camera::EnableDistanceDatas__std::s"></span><span class="target" id="classmynteyed_1_1_camera_1a238642e2511bfd207fb4d9e41d25ec6c"></span>void <code class="sig-name descname">EnableDistanceDatas</code><span class="sig-paren">(</span>std::size_t <em>max_size</em> = std::numeric_limits&lt;std::size_t&gt;::max()<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera19EnableDistanceDatasENSt6size_tE" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Enable distance datas. </p>
+<p>If max_size &lt;= 0, indicates only can get datas from callback. If max_size &gt; 0, indicates can get datas from callback or using <a class="reference internal" href="#classmynteyed_1_1_camera_1ad476735d00e8fc9a2735e7af1f2edf97"><span class="std std-ref">GetDistanceDatas()</span></a>.</p>
+<p>Note: if max_size &gt; 0, the distance datas will be cached until you call <a class="reference internal" href="#classmynteyed_1_1_camera_1ad476735d00e8fc9a2735e7af1f2edf97"><span class="std std-ref">GetDistanceDatas()</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera20DisableDistanceDatasEv">
+<span id="_CPPv3N8mynteyed6Camera20DisableDistanceDatasEv"></span><span id="_CPPv2N8mynteyed6Camera20DisableDistanceDatasEv"></span><span id="mynteyed::Camera::DisableDistanceDatas"></span><span class="target" id="classmynteyed_1_1_camera_1a293408d3a868e3dc512f960326930cdb"></span>void <code class="sig-name descname">DisableDistanceDatas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera20DisableDistanceDatasEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Disable distance datas. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK8mynteyed6Camera22IsDistanceDatasEnabledEv">
+<span id="_CPPv3NK8mynteyed6Camera22IsDistanceDatasEnabledEv"></span><span id="_CPPv2NK8mynteyed6Camera22IsDistanceDatasEnabledEv"></span><span id="mynteyed::Camera::IsDistanceDatasEnabledC"></span><span class="target" id="classmynteyed_1_1_camera_1a67020e597047258eee6a8ad1bb7c42d4"></span>bool <code class="sig-name descname">IsDistanceDatasEnabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK8mynteyed6Camera22IsDistanceDatasEnabledEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Whethor distance datas enabled or not. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera16GetDistanceDatasEv">
+<span id="_CPPv3N8mynteyed6Camera16GetDistanceDatasEv"></span><span id="_CPPv2N8mynteyed6Camera16GetDistanceDatasEv"></span><span id="mynteyed::Camera::GetDistanceDatas"></span><span class="target" id="classmynteyed_1_1_camera_1ad476735d00e8fc9a2735e7af1f2edf97"></span>std::vector&lt;DistanceData&gt; <code class="sig-name descname">GetDistanceDatas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera16GetDistanceDatasEv" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Get cached distance datas. </p>
+<p>Besides, you can also get them from callback </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera19SetDistanceCallbackE19distance_callback_tb">
+<span id="_CPPv3N8mynteyed6Camera19SetDistanceCallbackE19distance_callback_tb"></span><span id="_CPPv2N8mynteyed6Camera19SetDistanceCallbackE19distance_callback_tb"></span><span id="mynteyed::Camera::SetDistanceCallback__distance_callback_t.b"></span><span class="target" id="classmynteyed_1_1_camera_1a2d3b6f41c579d0a65fdad51b36ed93cf"></span>void <code class="sig-name descname">SetDistanceCallback</code><span class="sig-paren">(</span>distance_callback_t <em>callback</em>, bool <em>async</em> = true<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera19SetDistanceCallbackE19distance_callback_tb" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Set distance data callback. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N8mynteyed6Camera27AuxiliaryChipFirmwareUpdateEPKc">
+<span id="_CPPv3N8mynteyed6Camera27AuxiliaryChipFirmwareUpdateEPKc"></span><span id="_CPPv2N8mynteyed6Camera27AuxiliaryChipFirmwareUpdateEPKc"></span><span id="mynteyed::Camera::AuxiliaryChipFirmwareUpdate__cCP"></span><span class="target" id="classmynteyed_1_1_camera_1a165156a33fb1960bca1e1b87001e9e9e"></span>bool <code class="sig-name descname">AuxiliaryChipFirmwareUpdate</code><span class="sig-paren">(</span><em class="property">const</em> char *<em>filepath</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8mynteyed6Camera27AuxiliaryChipFirmwareUpdateEPKc" title="永久链接至目标">¶</a><br /></dt>
+<dd><p>Update auxiliary chip firmware. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="device.html" class="btn btn-neutral float-right" title="Device" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contents.html" class="btn btn-neutral float-left" title="API DOCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

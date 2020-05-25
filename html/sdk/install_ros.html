@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ROS Wrapper 安装 &mdash; MYNT EYE D SDK 1.8.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="ROS Wrapper 说明" href="install_ros_usage.html" />
+    <link rel="prev" title="Windows EXE 安装" href="install_win_exe.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> MYNT EYE D SDK
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../product/contents.html">产品</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">SDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sdk_info.html">SDK 说明</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="sdk_install.html">SDK 安装</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="install_ubuntu_src.html">Ubuntu 源码安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_win_src.html">Windows 源码安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_win_exe.html">Windows EXE 安装</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ROS Wrapper 安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="install_ros_usage.html">ROS Wrapper 说明</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="samples/contents.html">SDK 样例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/contents.html">SDK 工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_projects.html">工程引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sdk_changelog.html">更新日志</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../firmware/contents.html">固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/contents.html">使用工具支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openproject/contents.html">开源项目支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apidoc/contents.html">API DOCS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../support/contents.html">技术支持</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MYNT EYE D SDK</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">SDK</a> &raquo;</li>
+        
+          <li><a href="sdk_install.html">SDK 安装</a> &raquo;</li>
+        
+      <li>ROS Wrapper 安装</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/sdk/install_ros.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ros-wrapper">
+<span id="sdk-install-ros"></span><h1>ROS Wrapper 安装<a class="headerlink" href="#ros-wrapper" title="永久链接至标题">¶</a></h1>
+<div class="section" id="ros">
+<h2>1.1 安装 ROS<a class="headerlink" href="#ros" title="永久链接至标题">¶</a></h2>
+<div class="section" id="ros-melodic-ubuntu-18-04">
+<h3>ROS Melodic (Ubuntu 18.04)<a class="headerlink" href="#ros-melodic-ubuntu-18-04" title="永久链接至标题">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo sh -c <span class="s1">&#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</span>
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+sudo apt update
+sudo apt install ros-melodic-desktop-full
+sudo rosdep init
+rosdep update
+<span class="nb">echo</span> <span class="s2">&quot;source /opt/ros/melodic/setup.bash&quot;</span> &gt;&gt; ~/.bashrc
+<span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+</div>
+<div class="section" id="ros-kinetic-ubuntu-16-04">
+<h3>ROS Kinetic (Ubuntu 16.04)<a class="headerlink" href="#ros-kinetic-ubuntu-16-04" title="永久链接至标题">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/oroca/oroca-ros-pkg/master/ros_install.sh <span class="o">&amp;&amp;</span> <span class="se">\</span>
+chmod <span class="m">755</span> ./ros_install.sh <span class="o">&amp;&amp;</span> bash ./ros_install.sh catkin_ws kinetic
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>1.2 编译 ROS Wrapper<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make ros
+</pre></div>
+</div>
+<p><strong>Core:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscore
+</pre></div>
+</div>
+<p><strong>RViz Display:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ./wrappers/ros/devel/setup.bash
+roslaunch mynteye_wrapper_d display.launch
+</pre></div>
+</div>
+<p><strong>Publish:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ./wrappers/ros/devel/setup.bash
+roslaunch mynteye_wrapper_d mynteye.launch
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="install_ros_usage.html" class="btn btn-neutral float-right" title="ROS Wrapper 说明" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="install_win_exe.html" class="btn btn-neutral float-left" title="Windows EXE 安装" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, MYNTAI
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
